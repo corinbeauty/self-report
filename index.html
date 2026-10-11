@@ -120,6 +120,62 @@
   .page-label{position:absolute;right:18mm;top:12mm;color:#9aa49f;font-size:9pt}
   .toc{display:grid;gap:0;margin-top:18px}.toc div{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.toc b{color:var(--green);min-width:28px}
   .small{font-size:10pt;color:var(--muted)}
+
+  /* 開發程式總覽連結橫幅樣式 */
+  .portfolio-banner {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--white);
+      border: 1.5px solid var(--green);
+      padding: 16px 22px;
+      border-radius: 12px;
+      margin-top: 28px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+  }
+  .portfolio-banner:hover {
+      box-shadow: 0 8px 24px rgba(31,90,77,.15);
+      transform: translateY(-2px);
+      background: var(--sage);
+  }
+  .portfolio-banner::after {
+      content: "↗";
+      position: absolute;
+      right: 22px;
+      font-size: 18pt;
+      color: var(--green);
+      font-weight: 800;
+  }
+  .portfolio-banner .icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      background: var(--green);
+      color: white;
+      border-radius: 50%;
+      font-size: 16pt;
+      flex-shrink: 0;
+  }
+  .portfolio-banner-text {
+      flex: 1;
+  }
+  .portfolio-banner-text strong {
+      display: block;
+      font-size: 13pt;
+      color: var(--green);
+      margin-bottom: 3px;
+      letter-spacing: 0.03em;
+  }
+  .portfolio-banner-text small {
+      color: var(--muted);
+      font-size: 10pt;
+      display: block;
+  }
   
   @media(max-width:900px){
     body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:6vh}.cover-note{grid-template-columns:1fr}
@@ -133,11 +189,25 @@
     .reporter-info {
         font-size: 9pt;
     }
+    .portfolio-banner {
+        padding: 14px 16px;
+    }
+    .portfolio-banner::after {
+        right: 16px;
+    }
   }
   @media print{
     @page{size:A4 portrait;margin:0}
     body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
     .toolbar{display:none}.report{margin:0;max-width:none}.page{margin:0;box-shadow:none;width:210mm;height:297mm;min-height:297mm;padding:18mm 18mm 16mm}.page::after{content:"不老松｜升遷暨職務調整提案"}
+    .portfolio-banner {
+        border-color: var(--line);
+    }
+    .portfolio-banner:hover {
+        transform: none;
+        box-shadow: none;
+        background: var(--white);
+    }
   }
 </style>
 </head>
@@ -317,10 +387,17 @@
       <div class="quote">我願意深入現場了解問題，也願意運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。</div>
       <p>如果公司認同這個方向，我願意承擔更大的責任，與各門店店長、總監及公司管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
       <div class="rule"></div><div class="grid-3"><div class="card accent"><h3>可落地</h3><p>從現場出發，制度與系統真正符合工作流程。</p></div><div class="card accent"><h3>可衡量</h3><p>以數據追蹤進度，讓成果清楚可見。</p></div><div class="card accent"><h3>可持續</h3><p>透過訓練、系統與治理，形成長期能力。</p></div></div>
+      
+      <!-- 目前已開發程式總覽連結欄位 -->
+      <a href="#" class="portfolio-banner">
+          <div class="icon">💻</div>
+          <div class="portfolio-banner-text">
+              <strong>目前已開發程式總覽</strong>
+              <small>點擊查看現有系統開發成果（連結後續更新）</small>
+          </div>
+      </a>
+      
     </section>
   </main>
 </body>
 </html>
-```
-
-*備註：當您在 GitHub 部署完成後，如果把網址貼到 LINE 對話窗，LINE 會去抓取這些標籤來顯示預覽。如果原本已經傳過該網址且被快取（Cache）舊資料，可以使用 [LINE Page Poker](https://poker.line.naver.jp/) 工具來清除快取，這樣新的標題就會馬上更新顯示了。*
