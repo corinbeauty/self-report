@@ -176,6 +176,51 @@
       font-size: 10pt;
       display: block;
   }
+
+  /* 預計開發系統區塊樣式 */
+  .roadmap-section {
+      margin-top: 20px;
+      border-top: 1px dashed var(--line);
+      padding-top: 18px;
+  }
+  .roadmap-title {
+      font-size: 11pt;
+      color: var(--muted);
+      font-weight: bold;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  }
+  .roadmap-title::before {
+      content: "⚙️";
+  }
+  .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+  }
+  .roadmap-card {
+      background: var(--cream);
+      border: 1px solid rgba(186,139,74,.3);
+      padding: 12px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  .roadmap-card .bullet {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+  }
+  .roadmap-card span {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #4b4438;
+  }
   
   @media(max-width:900px){
     body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:6vh}.cover-note{grid-template-columns:1fr}
@@ -195,6 +240,9 @@
     .portfolio-banner::after {
         right: 16px;
     }
+    .roadmap-grid {
+        grid-template-columns: 1fr;
+    }
   }
   @media print{
     @page{size:A4 portrait;margin:0}
@@ -207,6 +255,10 @@
         transform: none;
         box-shadow: none;
         background: var(--white);
+    }
+    .roadmap-card {
+        border-color: #d9dfdc;
+        background: #fbfcfb;
     }
   }
 </style>
@@ -396,6 +448,29 @@
               <small>點擊查看現有系統開發成果（連結後續更新）</small>
           </div>
       </a>
+
+      <!-- 預計開發系統區塊 -->
+      <div class="roadmap-section">
+          <div class="roadmap-title">預計開發系統 Roadmap</div>
+          <div class="roadmap-grid">
+              <div class="roadmap-card">
+                  <div class="bullet"></div>
+                  <span>財務對帳系統</span>
+              </div>
+              <div class="roadmap-card">
+                  <div class="bullet"></div>
+                  <span>人才管理資料庫</span>
+              </div>
+              <div class="roadmap-card">
+                  <div class="bullet"></div>
+                  <span>人力黑名單系統</span>
+              </div>
+              <div class="roadmap-card">
+                  <div class="bullet"></div>
+                  <span>維修報修系統</span>
+              </div>
+          </div>
+      </div>
       
     </section>
   </main>
