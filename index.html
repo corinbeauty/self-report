@@ -274,7 +274,7 @@
           </div>
           <div class="reporter-info">
               報告人：賴信吉<br>
-              時間：2026/10/10
+              2026/10/10
           </div>
       </div>
       
@@ -433,15 +433,38 @@
       <div style="height:18px"></div><h3>建議的管理節奏</h3><div class="grid-3"><div class="card"><b style="color:var(--green)">每週</b><p class="small">問題與需求彙整、進度回報、異常處理。</p></div><div class="card"><b style="color:var(--green)">每月</b><p class="small">營運指標檢視、跨店比較、改善驗收。</p></div><div class="card"><b style="color:var(--green)">每季</b><p class="small">制度盤點、訓練成效與系統優化規劃。</p></div></div>
     </section>
 
+    <!-- 新增：第08頁 系統架構與藍圖 -->
     <section class="page">
-      <div class="page-label">08 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
-      <p class="lead">我希望這次升遷不只是個人職涯的提升，而是能夠替公司建立長期可運作、可量化、可複製、可持續改善的管理制度。</p>
-      <div class="quote">我願意深入現場了解問題，也願意運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。</div>
-      <p>如果公司認同這個方向，我願意承擔更大的責任，與各門店店長、總監及公司管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
-      <div class="rule"></div><div class="grid-3"><div class="card accent"><h3>可落地</h3><p>從現場出發，制度與系統真正符合工作流程。</p></div><div class="card accent"><h3>可衡量</h3><p>以數據追蹤進度，讓成果清楚可見。</p></div><div class="card accent"><h3>可持續</h3><p>透過訓練、系統與治理，形成長期能力。</p></div></div>
+      <div class="page-label">08 / 系統架構與藍圖</div><div class="section-kicker">Architecture &amp; Roadmap</div><h2>企業級雲端基礎設施</h2>
+      <p class="lead">為加速開發時程及 API 調用，系統開發架構後端採用 Google Workspace 全球企業級伺服器，免除本地端當機風險或在地維護之不便性。</p>
+      
+      <div class="card accent">
+        <h3 style="margin-bottom: 14px;">Google Cloud &amp; Firebase 雲端架構</h3>
+        <div class="grid-2" style="font-size: 10.5pt; color: #4b4438;">
+          <ul style="margin:0; padding-left: 1.25em;">
+            <li style="margin-bottom:8px"><b>公司 Google 管理帳號：</b><br>管理公司擁有的雲端資源。</li>
+            <li style="margin-bottom:8px"><b>Google Cloud 專案與帳務：</b><br>統一管理 API、權限與費用。</li>
+            <li style="margin-bottom:8px"><b>Firebase Authentication：</b><br>建立系統登入與帳號驗證。</li>
+            <li style="margin-bottom:8px"><b>Cloud Firestore：</b><br>儲存系統核心資料庫。</li>
+          </ul>
+          <ul style="margin:0; padding-left: 1.25em;">
+            <li style="margin-bottom:8px"><b>Firebase Hosting：</b><br>發布網站與前端部署。</li>
+            <li style="margin-bottom:8px"><b>GitHub Repository：</b><br>保存程式碼與修改紀錄。</li>
+            <li style="margin-bottom:8px"><b>IAM、資安規則與備份：</b><br>建立權限、資料安全及復原機制。</li>
+            <li style="margin-bottom:8px"><b>Cloud Logging 與費用警示：</b><br>追蹤錯誤並避免非預期支出。</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="background: var(--sage); color: var(--green); padding: 14px 20px; border-radius: 8px; margin-top: 16px; font-weight: bold; font-size: 11pt; display: flex; align-items: flex-start; gap: 10px;">
+        <span style="font-size: 14pt; line-height: 1.2;">💡</span> 
+        <div>以上雲端架構與資源，初期預估每月維運成本約 <b>NT$ 300 ～ $3,000</b><span style="font-size: 10pt; font-weight: normal; color: var(--green-2);">（將依實際資料儲存與流量而定）</span>。</div>
+      </div>
+
+      <div class="rule"></div>
       
       <!-- 目前已開發程式總覽連結欄位 -->
-      <a href="#" class="portfolio-banner">
+      <a href="#" class="portfolio-banner" style="margin-top: 0;">
           <div class="icon">💻</div>
           <div class="portfolio-banner-text">
               <strong>目前已開發程式總覽</strong>
@@ -469,6 +492,29 @@
                   <div class="bullet"></div>
                   <span>維修報修系統</span>
               </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- 原本的結語改為第09頁 -->
+    <section class="page">
+      <div class="page-label">09 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
+      <p class="lead">我希望這次升遷不只是個人職涯的提升，而是能夠替公司建立長期可運作、可量化、可複製、可持續改善的管理制度。</p>
+      <div class="quote">我願意深入現場了解問題，也願意運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。</div>
+      <p>如果公司認同這個方向，我願意承擔更大的責任，與各門店店長、總監及公司管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
+      <div class="rule"></div><div class="grid-3"><div class="card accent"><h3>可落地</h3><p>從現場出發，制度與系統真正符合工作流程。</p></div><div class="card accent"><h3>可衡量</h3><p>以數據追蹤進度，讓成果清楚可見。</p></div><div class="card accent"><h3>可持續</h3><p>透過訓練、系統與治理，形成長期能力。</p></div></div>
+      
+      <div style="margin-top:42px; border-top: 1px solid var(--line); padding-top: 24px;">
+          <h3 style="font-size: 11pt; color: var(--muted); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <span>⚖️</span> 系統開發及維護責任條款（雙方權益草案）
+          </h3>
+          <div class="card" style="background: var(--cream); border: 1px solid rgba(186,139,74,.3); font-size: 10pt; color: #4b4438; line-height: 1.8;">
+              <ul style="margin: 0; padding-left: 1.25em;">
+                  <li style="margin-bottom: 6px;"><b>系統所有權與智財權：</b>任職期間內因職務所需開發之系統架構、程式碼及相關文件，其智慧財產權歸屬公司所有。</li>
+                  <li style="margin-bottom: 6px;"><b>開發範圍與時程管理：</b>系統需求與新增功能需經雙方評估合理性並確認後排入排程，以確保系統穩定及日常營運。</li>
+                  <li style="margin-bottom: 6px;"><b>維護責任與文件交接：</b>任職期間負有系統穩定運作之責任；若遇職務異動，需提供完整操作文件及原始碼，確實完成交接。</li>
+                  <li style="margin-bottom: 0;"><b>資料安全與保密義務：</b>於系統開發及維護過程中，接觸之公司營業秘密、財務數據及客戶資料，均嚴格遵守保密規範。</li>
+              </ul>
           </div>
       </div>
       
