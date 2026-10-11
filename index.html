@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>不老松｜升遷暨職務調整提案</title>
+<style>
+  :root{
+    --ink:#243238; --muted:#68757a; --green:#1f5a4d; --green-2:#2f7765;
+    --sage:#dfece5; --gold:#ba8b4a; --cream:#f6f3ec; --line:#d9dfdc;
+    --white:#fff; --shadow:0 18px 42px rgba(32,55,49,.12);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#e9eeeb;color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.75}
+  .toolbar{position:sticky;top:0;z-index:10;background:rgba(246,248,246,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .toolbar small{color:var(--muted)}
+  .toolbar button{border:0;background:var(--green);color:white;border-radius:999px;padding:9px 17px;font-weight:700;cursor:pointer}
+  .report{max-width:900px;margin:28px auto 60px}
+  .page{width:210mm;min-height:297mm;background:var(--white);margin:0 auto 24px;padding:18mm 18mm 16mm;position:relative;overflow:hidden;box-shadow:var(--shadow);page-break-after:always}
+  .page:last-child{page-break-after:auto}
+  .page::after{content:"不老松｜升遷暨職務調整提案";position:absolute;bottom:8mm;left:18mm;right:18mm;border-top:1px solid var(--line);padding-top:4mm;color:#89958f;font-size:9pt;letter-spacing:.05em}
+  .cover{background:linear-gradient(145deg,#fbfcfa 0%,#edf5f0 56%,#dcebe3 100%);display:flex;flex-direction:column;justify-content:space-between}
+  .cover::before{content:"";position:absolute;width:190mm;height:190mm;border-radius:50%;right:-105mm;top:-50mm;background:rgba(31,90,77,.08)}
+  .cover::after{content:"不老松｜升遷暨職務調整提案";border-top:0;color:rgba(36,50,56,.58)}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.12em;color:var(--green)}
+  .logo{width:48px;height:48px;border-radius:50%;background:var(--green);position:relative;display:grid;place-items:center;color:white;box-shadow:0 8px 18px rgba(31,90,77,.24)}
+  .logo::before{content:"";width:20px;height:27px;border:2px solid #dcebe3;border-radius:70% 20% 70% 20%;transform:rotate(37deg);position:absolute;top:8px;left:14px}
+  .logo::after{content:"";width:2px;height:22px;background:#dcebe3;position:absolute;transform:rotate(37deg);top:14px;left:24px}
+  .cover-main{position:relative;margin-top:28mm}
+  .eyebrow{color:var(--gold);font-size:11pt;font-weight:800;letter-spacing:.2em;margin-bottom:10px}
+  h1{font-size:32pt;line-height:1.25;letter-spacing:.06em;margin:0 0 18px;color:var(--green)}
+  .cover-sub{font-size:16pt;color:var(--ink);max-width:130mm;line-height:1.7}
+  .cover-line{width:55mm;height:4px;background:var(--gold);margin:24px 0}
+  .cover-note{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px;border-top:1px solid rgba(31,90,77,.25);padding-top:14px;color:var(--muted);font-size:10.5pt}
+  .section-kicker{font-size:10pt;color:var(--gold);font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:4px}
+  h2{font-size:23pt;color:var(--green);line-height:1.3;margin:0 0 14px;letter-spacing:.04em}
+  h3{font-size:14pt;color:var(--green);margin:0 0 7px}
+  p{margin:0 0 12px}
+  .lead{font-size:13pt;line-height:1.9;color:#435257}
+  .rule{height:1px;background:var(--line);margin:20px 0}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:15px;background:#fbfcfb}
+  .card.accent{border-top:4px solid var(--green);background:linear-gradient(180deg,#f4f9f6,#fff)}
+  .num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--sage);color:var(--green);font-weight:800;margin-bottom:9px}
+  .pill{display:inline-block;background:var(--sage);color:var(--green);font-weight:700;padding:3px 10px;border-radius:999px;font-size:9.5pt;margin:0 5px 6px 0}
+  ul{padding-left:1.25em;margin:8px 0 0} li{margin:5px 0}
+  .quote{border-left:4px solid var(--gold);padding:10px 16px;background:var(--cream);font-size:13pt;font-weight:700;color:#4b4438;margin:18px 0}
+  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+  .flow .stage{position:relative;padding:15px 13px;border-radius:12px;background:var(--green);color:#fff;min-height:125px}
+  .flow .stage:not(:last-child)::after{content:"→";position:absolute;right:-18px;top:42px;color:var(--gold);font-size:22px;font-weight:800;z-index:2}
+  .stage strong{display:block;font-size:13pt;margin-bottom:5px}
+  .stage small{opacity:.9;line-height:1.6}
+  .metric{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line)}
+  .metric:last-child{border-bottom:0}.metric b{color:var(--green)}
+  .highlight{background:var(--green);color:white;border-radius:15px;padding:20px;margin:16px 0}
+  .highlight h3{color:#fff}.highlight .big{font-size:28pt;font-weight:800;line-height:1.25;color:#f2d6a7}
+  .checklist{counter-reset:item;display:grid;gap:9px}
+  .checklist div{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+  .checklist div::before{counter-increment:item;content:counter(item);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--sage);color:var(--green);font-weight:800}
+  .signature{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:30px;color:var(--muted)}
+  .signature div{border-top:1px solid var(--ink);padding-top:7px}
+  .page-label{position:absolute;right:18mm;top:12mm;color:#9aa49f;font-size:9pt}
+  .toc{display:grid;gap:0;margin-top:18px}.toc div{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.toc b{color:var(--green);min-width:28px}
+  .small{font-size:10pt;color:var(--muted)}
+  @media(max-width:900px){
+    body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:20vh}.cover-note{grid-template-columns:1fr}.signature{grid-template-columns:1fr;gap:24px}}
+  @media print{
+    @page{size:A4 portrait;margin:0}
+    body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .toolbar{display:none}.report{margin:0;max-width:none}.page{margin:0;box-shadow:none;width:210mm;height:297mm;min-height:297mm;padding:18mm 18mm 16mm}.page::after{content:"不老松｜升遷暨職務調整提案"}
+  }
+</style>
+</head>
+<body>
+  <div class="toolbar"><small>不老松｜升遷暨職務調整提案</small><button onclick="window.print()">列印／另存 PDF</button></div>
+  <main class="report">
+    <section class="page cover">
+      <div class="brand"><span class="logo" aria-hidden="true"></span><span>不老松</span></div>
+      <div class="cover-main">
+        <div class="eyebrow">CAREER &amp; ORGANIZATION PROPOSAL</div>
+        <h1>升遷暨職務<br/>調整提案</h1>
+        <div class="cover-line"></div>
+        <div class="cover-sub">以營運改善、資訊系統與教育訓練，建立可量化、可複製、可持續的公司級管理機制。</div>
+      </div>
+      <div class="cover-note"><div><b>提案定位</b><br/>營運改善暨資訊系統主管</div><div><b>涵蓋範圍</b><br/>全台 22 家門店｜跨店管理與數位化</div></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">01 / 提案摘要</div>
+      <div class="section-kicker">Executive Summary</div><h2>從個人能力，升級為公司管理價值</h2>
+      <p class="lead">感謝公司對我的肯定，以及願意給我更大的發展機會。針對此次前往其他門店協助改善營運的安排，我願意承擔更大責任，並希望將門店管理經驗、程式開發能力及系統架構思維，轉化為能長期協助公司發展的管理價值。</p>
+      <div class="quote">這次職務調整不只是單純升遷，而是整合「營運管理 × 資訊系統 × 教育訓練」三大面向。</div>
+      <div class="grid-3">
+        <div class="card accent"><div class="num">01</div><h3>現場落地</h3><p>深入北、中、南門店，從第一線作業理解需求與問題，建立符合現場的改善制度。</p></div>
+        <div class="card accent"><div class="num">02</div><h3>數據追蹤</h3><p>統一指標與回報方式，以營運數據、執行率及品質指標追蹤改善成果。</p></div>
+        <div class="card accent"><div class="num">03</div><h3>持續複製</h3><p>把個人經驗轉化為制度、教材及系統功能，讓成功做法可跨店推廣。</p></div>
+      </div>
+      <div class="rule"></div><h3>提案核心成果</h3>
+      <div class="toc"><div><b>A</b><span>建立跨店營運改善與問題追蹤機制</span></div><div><b>B</b><span>統籌全台 22 家門店資訊系統規劃、開發與維護</span></div><div><b>C</b><span>建置新人、主管與晉升培訓的標準化制度</span></div><div><b>D</b><span>形成「發現問題 → 分析原因 → 改善 → 驗收」的管理循環</span></div></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">02 / 職務定位</div><div class="section-kicker">Role Definition</div><h2>三大職責，對應公司級管理任務</h2>
+      <div class="card accent"><div class="num">01</div><h3>營運管理與跨店改善</h3><p>協助處理問題門店的營運、人員管理、服務品質及工作流程；與店長及總監共同分析問題、制定改善方案並追蹤執行成果。</p><div><span class="pill">現場觀察</span><span class="pill">流程改善</span><span class="pill">跨店複製</span></div></div>
+      <div style="height:12px"></div>
+      <div class="card accent"><div class="num">02</div><h3>資訊系統規劃、開發與維護</h3><p>負責全台 22 家門店的內部資訊系統規劃、架構設計、程式開發、功能優化及持續維護，逐步建立整合性、標準化且可複製的數位管理系統。</p><div><span class="pill">系統架構</span><span class="pill">需求管理</span><span class="pill">數位管理</span></div></div>
+      <div style="height:12px"></div>
+      <div class="card accent"><div class="num">03</div><h3>教育訓練與人才培育</h3><p>建立新人訓練、主管培訓、晉升評核及標準作業流程；結合數位工具，留下訓練紀錄、執行進度、考核結果與追蹤機制。</p><div><span class="pill">教材制度</span><span class="pill">主管培訓</span><span class="pill">晉升評核</span></div></div>
+      <div class="highlight"><h3>職務價值主張</h3><p>讓資訊系統不只是輔助工具，而是連結現場營運、人才培育與管理決策的重要基礎。</p></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">03 / 執行架構</div><div class="section-kicker">Operating Model</div><h2>前端 × 中端 × 後端整合</h2>
+      <p class="lead">為避免升任管理職後與第一線現場作業脫軌，採取「前端實地操作、中端協同改善、後端數位管理」的工作模式，讓制度與系統真正符合現場需求。</p>
+      <div class="flow"><div class="stage"><strong>前端｜看見問題</strong><small>北、中、南門店實地操作、流程觀察、問題蒐集與數據建立。</small></div><div class="stage"><strong>中端｜共同改善</strong><small>與店長及總監分析原因、規劃責任分工、訓練與改善期限。</small></div><div class="stage"><strong>後端｜形成系統</strong><small>將問題、方案與教材數位化，建立回報、追蹤、驗收與結案機制。</small></div></div>
+      <div class="grid-2">
+        <div class="card"><h3>前端：實地操作與數據蒐集</h3><ul><li>了解人員作業、服務流程、營運管理與系統使用情況。</li><li>將口頭回報與個人判斷，轉換為可量化、可比較、可追蹤的指標。</li><li>建立改善前後的比較基準，讓決策有實際依據。</li></ul></div>
+        <div class="card"><h3>中端：協同改善與訓練規劃</h3><ul><li>找出影響效率、品質與執行力的關鍵因素。</li><li>制定改善方案、責任分工與完成期限。</li><li>把個別門店問題轉化為可複製、可推廣方案。</li></ul></div>
+      </div>
+      <div style="height:14px"></div><div class="card"><h3>後端：教育訓練數位化、系統與回報</h3><div class="grid-2"><ul><li>教材與標準作業流程管理</li><li>新人、主管與晉升考核紀錄</li><li>各門店執行進度與定期回報</li></ul><ul><li>異常事件、問題通報與改善追蹤</li><li>營運指標、目標達成率與跨店比較</li><li>管理報表與數據儀表板</li></ul></div></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">04 / 數據管理</div><div class="section-kicker">Data-driven Management</div><h2>從經驗管理，走向成果管理</h2>
+      <p class="lead">數據導向並不是單純追求數字，而是透過客觀資料協助管理者了解問題、判斷優先順序及確認改善成效。</p>
+      <div class="grid-2">
+        <div class="card"><h3>營運管理</h3><div class="metric"><span>營業額</span><b>目標達成率</b></div><div class="metric"><span>來客數</span><b>客單價</b></div></div>
+        <div class="card"><h3>人員管理</h3><div class="metric"><span>出勤狀況</span><b>工作執行率</b></div><div class="metric"><span>培訓完成率</span><b>考核結果</b></div></div>
+        <div class="card"><h3>服務品質</h3><div class="metric"><span>客訴件數</span><b>顧客評價</b></div><div class="metric"><span>回訪狀況</span><b>改善完成率</b></div></div>
+        <div class="card"><h3>工作效率與系統</h3><div class="metric"><span>處理時間</span><b>流程完成率</b></div><div class="metric"><span>錯誤／異常件數</span><b>資料填報完整率</b></div></div>
+      </div>
+      <div class="rule"></div><h3>五步驟管理循環</h3>
+      <div class="checklist"><div><span>建立數據標準</span><small>統一指標定義、資料格式與回報方式。</small></div><div><span>建立量化目標</span><small>依工作性質設定目標值、期限與負責人。</small></div><div><span>建立追蹤機制</span><small>記錄執行進度、異常狀況與改善結果。</small></div><div><span>建立數據分析</span><small>比較門店表現與改善前後差異，找出原因及成功做法。</small></div><div><span>建立持續改善</span><small>將分析結果回饋至現場、訓練與系統功能優化。</small></div></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">05 / 管理目標</div><div class="section-kicker">Management Outcomes</div><h2>把現場經驗轉化為公司制度</h2>
+      <div class="highlight"><h3>核心管理循環</h3><div class="big">現場發現問題<br/>→ 數據分析原因<br/>→ 跨部門共同改善<br/>→ 教育訓練落實<br/>→ 系統持續追蹤</div></div>
+      <div class="grid-2"><div class="card accent"><h3>對門店</h3><ul><li>提升營運效率與管理一致性</li><li>降低重複作業與資訊落差</li><li>縮短問題發現與處理時間</li><li>讓改善成果可被檢視與追蹤</li></ul></div><div class="card accent"><h3>對公司</h3><ul><li>建立可跨店複製的管理制度</li><li>提升人才培育與晉升品質</li><li>讓管理決策更具透明度與依據</li><li>逐步形成公司級數位管理基礎</li></ul></div></div>
+      <div class="rule"></div><h3>預期長期價值</h3><p class="lead">透過前端實地了解、中端協同改善及後端數位整合，將個人經驗轉化為公司制度，將現場作業轉化為數據，將管理需求轉化為系統功能，最終建立能持續運作、跨店複製並不斷優化的管理架構。</p>
+      <p>這不只是協助單一門店解決問題，而是從全公司角度，提升 22 家門店的管理效率、執行一致性、人才培育能力及整體營運品質。</p>
+    </section>
+
+    <section class="page">
+      <div class="page-label">06 / 職稱與薪資</div><div class="section-kicker">Position &amp; Compensation</div><h2>職責、權限與回報機制應相互對應</h2>
+      <div class="card accent"><h3>建議正式職稱</h3><p style="font-size:20pt;color:var(--green);font-weight:800;margin:5px 0">營運改善暨資訊系統主管</p><p>正式承接全公司資訊系統管理及教育訓練相關職責。</p></div>
+      <div style="height:14px"></div><div class="card"><h3>職務延伸討論</h3><p>若公司希望由我統籌全公司的資訊策略、系統架構及數位化發展，亦希望進一步討論「資訊長（CIO）」及「教育訓練主管」的職務定位與權責。</p></div>
+      <div class="highlight"><h3>薪資期望</h3><div class="big">每月增加 NT$28,000</div><p>此金額係針對新增職務的整體責任提出，並非僅針對單一系統或單次專案的開發費用。</p></div>
+      <h3>新增責任涵蓋</h3><div class="grid-2"><ul><li>跨店營運改善</li><li>全台 22 家門店資訊系統規劃</li><li>程式開發與持續維護</li></ul><ul><li>數據管理機制</li><li>教育訓練制度建置</li><li>數位化推動與管理整合</li></ul></div>
+      <div class="quote">期望薪資、職稱、工作責任與管理權限能夠相互對應，讓我以正式職務定位與合理資源配置，長期承擔公司級管理任務。</div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">07 / 權責與執行</div><div class="section-kicker">Governance &amp; Execution</div><h2>正式調整時，建議一併確認七項事項</h2>
+      <div class="checklist"><div><span>職務定位</span><small>正式職稱、工作範圍、匯報對象及決策權限。</small></div><div><span>交接安排</span><small>原門店職務的交接方式，以及跨店支援的工作安排。</small></div><div><span>巡店配置</span><small>北、中、南門店實地操作與巡店的頻率及時間配置。</small></div><div><span>系統治理</span><small>22 家門店的需求提出、開發優先順序、測試驗收與維護機制。</small></div><div><span>訓練推動</span><small>教育訓練制度的推動權限、各門店配合方式及執行責任。</small></div><div><span>成果評估</span><small>數據指標、階段性目標、成果評估方式及所需資源。</small></div><div><span>任命與薪資</span><small>薪資調整金額、生效日期及正式職務任命方式。</small></div></div>
+      <div class="rule"></div><div class="card"><h3>需求管理原則</h3><p>由於資訊系統涵蓋全台 22 家門店，後續涉及不同門店的實際需求、功能調整、系統穩定性及持續維護，因此需要建立明確的需求管理與工作優先順序，避免所有臨時需求同時進入開發流程，影響整體工作品質與進度。</p></div>
+      <div style="height:18px"></div><h3>建議的管理節奏</h3><div class="grid-3"><div class="card"><b style="color:var(--green)">每週</b><p class="small">問題與需求彙整、進度回報、異常處理。</p></div><div class="card"><b style="color:var(--green)">每月</b><p class="small">營運指標檢視、跨店比較、改善驗收。</p></div><div class="card"><b style="color:var(--green)">每季</b><p class="small">制度盤點、訓練成效與系統優化規劃。</p></div></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">08 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
+      <p class="lead">我希望這次升遷不只是個人職涯的提升，而是能夠替公司建立長期可運作、可量化、可複製、可持續改善的管理制度。</p>
+      <div class="quote">我願意深入現場了解問題，也願意運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。</div>
+      <p>如果公司認同這個方向，我願意承擔更大的責任，與各門店店長、總監及公司管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
+      <div class="rule"></div><div class="grid-3"><div class="card accent"><h3>可落地</h3><p>從現場出發，制度與系統真正符合工作流程。</p></div><div class="card accent"><h3>可衡量</h3><p>以數據追蹤進度，讓成果清楚可見。</p></div><div class="card accent"><h3>可持續</h3><p>透過訓練、系統與治理，形成長期能力。</p></div></div>
+      <div class="signature"><div>提案人</div><div>日期</div></div>
+    </section>
+  </main>
+</body>
+</html>
