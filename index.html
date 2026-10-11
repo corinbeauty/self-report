@@ -9,7 +9,7 @@
     --ink:#243238; --muted:#68757a; --green:#1f5a4d; --green-2:#2f7765;
     --sage:#dfece5; --gold:#ba8b4a; --cream:#f6f3ec; --line:#d9dfdc;
     --white:#fff; --shadow:0 18px 42px rgba(32,55,49,.12);
-    --red:#d32f2f; /* 新增紅色變數 */
+    --red:#d32f2f;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -24,11 +24,11 @@
   .cover{background:linear-gradient(145deg,#fbfcfa 0%,#edf5f0 56%,#dcebe3 100%);display:flex;flex-direction:column;justify-content:space-between}
   .cover::before{content:"";position:absolute;width:190mm;height:190mm;border-radius:50%;right:-105mm;top:-50mm;background:rgba(31,90,77,.08)}
   .cover::after{content:"不老松｜升遷暨職務調整提案";border-top:0;color:rgba(36,50,56,.58)}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.12em;color:var(--green)}
-  .logo{width:48px;height:48px;border-radius:50%;background:var(--green);position:relative;display:grid;place-items:center;color:white;box-shadow:0 8px 18px rgba(31,90,77,.24)}
-  .logo::before{content:"";width:20px;height:27px;border:2px solid #dcebe3;border-radius:70% 20% 70% 20%;transform:rotate(37deg);position:absolute;top:8px;left:14px}
-  .logo::after{content:"";width:2px;height:22px;background:#dcebe3;position:absolute;transform:rotate(37deg);top:14px;left:24px}
-  .cover-main{position:relative;margin-top:28mm}
+  
+  .brand{display:flex;align-items:center;}
+  .logo-img{height:80px;width:auto;object-fit:contain;mix-blend-mode:multiply;}
+  
+  .cover-main{position:relative;margin-top:24mm}
   .eyebrow{color:var(--gold);font-size:11pt;font-weight:800;letter-spacing:.2em;margin-bottom:10px}
   h1{font-size:32pt;line-height:1.25;letter-spacing:.06em;margin:0 0 18px;color:var(--green)}
   .cover-sub{font-size:16pt;color:var(--ink);max-width:130mm;line-height:1.7}
@@ -58,43 +58,41 @@
   .highlight{background:var(--green);color:white;border-radius:15px;padding:20px;margin:16px 0}
   .highlight h3{color:#fff}.highlight .big{font-size:28pt;font-weight:800;line-height:1.25;color:#f2d6a7}
   
-  /* 修正手機版 Checklist 擠壓變直行的問題 */
   .checklist{counter-reset:item;display:grid;gap:9px}
   .checklist > div { 
-      display: flex; /* 改用 flex */
-      align-items: flex-start; /* 讓內容靠上對齊 */
+      display: flex;
+      align-items: flex-start;
       gap: 10px; 
   }
   .checklist > div::before {
       counter-increment:item;
       content:counter(item);
-      display:inline-grid; /* 確保圓圈形狀 */
+      display:inline-grid;
       place-items:center;
-      width:26px; /* 固定寬度 */
-      min-width: 26px; /* 防止被擠壓 */
-      height:26px; /* 固定高度 */
+      width:26px;
+      min-width: 26px;
+      height:26px;
       border-radius:50%;
       background:var(--sage);
       color:var(--green);
       font-weight:800;
-      flex-shrink: 0; /* 關鍵：防止數字圓圈被縮小 */
-      margin-top: 2px; /* 微調對齊文字 */
+      flex-shrink: 0;
+      margin-top: 2px;
   }
   .checklist-content {
       display: flex;
       flex-direction: column;
-      flex: 1; /* 佔據剩餘空間 */
+      flex: 1;
   }
   .checklist-content span {
       font-weight: bold;
       color: var(--ink);
   }
   .checklist-content small {
-      display: block; /* 讓小字換行 */
+      display: block;
       margin-top: 2px;
   }
 
-  /* 報告人資訊樣式 */
   .reporter-info {
       position: absolute;
       top: 18mm;
@@ -103,29 +101,31 @@
       font-size: 10pt;
       color: var(--muted);
       line-height: 1.4;
+      z-index: 5;
   }
-  @media(max-width:900px){
-      .reporter-info {
-          position: static;
-          text-align: left;
-          margin-bottom: 20px;
-          border-bottom: 1px solid var(--line);
-          padding-bottom: 10px;
-      }
-  }
-
+  
   .text-red { color: var(--red); font-weight: bold; }
 
   .page-label{position:absolute;right:18mm;top:12mm;color:#9aa49f;font-size:9pt}
   .toc{display:grid;gap:0;margin-top:18px}.toc div{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.toc b{color:var(--green);min-width:28px}
   .small{font-size:10pt;color:var(--muted)}
+  
   @media(max-width:900px){
-    body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:10vh}.cover-note{grid-template-columns:1fr}}
+    body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:10vh}.cover-note{grid-template-columns:1fr}
+    .logo-img{height:64px;}
+    .reporter-info {
+        position: static;
+        text-align: left;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 10px;
+    }
+  }
   @media print{
     @page{size:A4 portrait;margin:0}
     body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
     .toolbar{display:none}.report{margin:0;max-width:none}.page{margin:0;box-shadow:none;width:210mm;height:297mm;min-height:297mm;padding:18mm 18mm 16mm}.page::after{content:"不老松｜升遷暨職務調整提案"}
-    .reporter-info { position: absolute; top: 18mm; right: 18mm; text-align: right; border-bottom: none; } /* 列印時恢復絕對定位 */
+    .reporter-info { position: absolute; top: 18mm; right: 18mm; text-align: right; border-bottom: none; }
   }
 </style>
 </head>
@@ -133,13 +133,15 @@
   <div class="toolbar"><small>不老松｜升遷暨職務調整提案</small><button onclick="window.print()">列印／另存 PDF</button></div>
   <main class="report">
     <section class="page cover">
-      <!-- 報告人資訊 -->
       <div class="reporter-info">
           報告人：賴信吉<br>
           時間：2016/10/10
       </div>
 
-      <div class="brand"><span class="logo" aria-hidden="true"></span><span>不老松</span></div>
+      <div class="brand">
+          <img src="logo.jpeg" alt="不老松足湯養身行館" class="logo-img">
+      </div>
+      
       <div class="cover-main">
         <div class="eyebrow">CAREER &amp; ORGANIZATION PROPOSAL</div>
         <h1>升遷暨職務<br/>調整提案</h1>
@@ -194,7 +196,6 @@
         <div class="card"><h3>工作效率與系統</h3><div class="metric"><span>處理時間</span><b>流程完成率</b></div><div class="metric"><span>錯誤／異常件數</span><b>資料填報完整率</b></div></div>
       </div>
       <div class="rule"></div><h3>五步驟管理循環</h3>
-      <!-- 修正後的 Checklist 結構 -->
       <div class="checklist">
           <div>
               <div class="checklist-content">
@@ -248,7 +249,6 @@
 
     <section class="page">
       <div class="page-label">07 / 權責與執行</div><div class="section-kicker">Governance &amp; Execution</div><h2>正式調整時，建議一併確認七項事項</h2>
-      <!-- 修正後的 Checklist 結構 -->
       <div class="checklist">
           <div>
               <div class="checklist-content">
@@ -303,7 +303,6 @@
       <div class="quote">我願意深入現場了解問題，也願意運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。</div>
       <p>如果公司認同這個方向，我願意承擔更大的責任，與各門店店長、總監及公司管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
       <div class="rule"></div><div class="grid-3"><div class="card accent"><h3>可落地</h3><p>從現場出發，制度與系統真正符合工作流程。</p></div><div class="card accent"><h3>可衡量</h3><p>以數據追蹤進度，讓成果清楚可見。</p></div><div class="card accent"><h3>可持續</h3><p>透過訓練、系統與治理，形成長期能力。</p></div></div>
-      <!-- 已刪除簽名區塊 -->
     </section>
   </main>
 </body>
