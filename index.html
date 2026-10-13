@@ -221,9 +221,67 @@
       font-weight: bold;
       color: #4b4438;
   }
+
+  /* 三大核心價值卡片樣式 */
+  .value-stack {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+  }
+  .value-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+  }
+  .value-card-header .num {
+      margin-bottom: 0;
+      flex-shrink: 0;
+  }
+  .value-card-header h3 {
+      margin: 0;
+      font-size: 14.5pt;
+  }
+  .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+  }
+  .pain-box {
+      background: #fdf6f6;
+      border-left: 3.5px solid #d97777;
+      padding: 12px 14px;
+      border-radius: 0 8px 8px 0;
+      font-size: 10.5pt;
+      color: #5a4242;
+      line-height: 1.65;
+  }
+  .pain-box strong {
+      display: block;
+      color: #b74444;
+      font-size: 10pt;
+      margin-bottom: 4px;
+      letter-spacing: 0.04em;
+  }
+  .gain-box {
+      background: #f2f8f5;
+      border-left: 3.5px solid var(--green);
+      padding: 12px 14px;
+      border-radius: 0 8px 8px 0;
+      font-size: 10.5pt;
+      color: var(--ink);
+      line-height: 1.65;
+  }
+  .gain-box strong {
+      display: block;
+      color: var(--green);
+      font-size: 10pt;
+      margin-bottom: 4px;
+      letter-spacing: 0.04em;
+  }
   
   @media(max-width:900px){
-    body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:6vh}.cover-note{grid-template-columns:1fr}
+    body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3,.vs-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:6vh}.cover-note{grid-template-columns:1fr}
     .cover-header {
         align-items: center;
         margin-bottom: 24px;
@@ -433,7 +491,7 @@
       <div style="height:18px"></div><h3>建議的管理節奏</h3><div class="grid-3"><div class="card"><b style="color:var(--green)">每週</b><p class="small">問題與需求彙整、進度回報、異常處理。</p></div><div class="card"><b style="color:var(--green)">每月</b><p class="small">營運指標檢視、跨店比較、改善驗收。</p></div><div class="card"><b style="color:var(--green)">每季</b><p class="small">制度盤點、訓練成效與系統優化規劃。</p></div></div>
     </section>
 
-    <!-- 新增：第08頁 系統架構與藍圖 -->
+    <!-- 第08頁 系統架構與藍圖 -->
     <section class="page">
       <div class="page-label">08 / 系統架構與藍圖</div><div class="section-kicker">Architecture &amp; Roadmap</div><h2>企業級雲端基礎設施</h2>
       <p class="lead">為加速開發時程及 API 調用，系統開發架構後端採用 <strong>Google Cloud (GCP) 企業級雲端基礎設施與 Firebase 開發平台</strong>，免除本地端當機風險及維護不便；並可結合公司既有的 Google Workspace 進行雲端資源與帳號的集中管理。</p>
@@ -496,9 +554,73 @@
       </div>
     </section>
 
-    <!-- 原本的結語改為第09頁 -->
+    <!-- 新增：第09頁 數位工具核心價值 -->
     <section class="page">
-      <div class="page-label">09 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
+      <div class="page-label">09 / 數位工具核心價值</div><div class="section-kicker">Core Value Proposition</div><h2>數位工具導入之三大核心價值</h2>
+      <p class="lead">透過自建系統與標準化工具，解決跨店管理最耗時的三大痛點，將人力與時間還給現場服務：</p>
+
+      <div class="value-stack">
+        <!-- 核心價值 1 -->
+        <div class="card accent">
+          <div class="value-card-header">
+            <div class="num">01</div>
+            <h3>大幅降低跨店溝通成本｜資訊同步零時差</h3>
+          </div>
+          <div class="vs-grid">
+            <div class="pain-box">
+              <strong>過去痛點</strong>
+              依賴 LINE 群組、電話或口頭交辦，訊息容易被洗版遺漏，跨部門與跨店來回確認耗費大量心力。
+            </div>
+            <div class="gain-box">
+              <strong>產生價值</strong>
+              透過系統建立「單一資訊入口」（如線上報修、問題通報、進度追蹤），所有狀態一目了然，省去重複詢問與人工催促進度的溝通成本。
+            </div>
+          </div>
+        </div>
+
+        <!-- 核心價值 2 -->
+        <div class="card accent">
+          <div class="value-card-header">
+            <div class="num">02</div>
+            <h3>財務數據統整與精準核對｜帳務透明防呆</h3>
+          </div>
+          <div class="vs-grid">
+            <div class="pain-box">
+              <strong>過去痛點</strong>
+              22 家門店各自結算、人工彙整報表，不僅耗時，且容易發生計算疏漏或格式不一，對帳成本極高。
+            </div>
+            <div class="gain-box">
+              <strong>產生價值</strong>
+              透過財務對帳系統自動統整各店數據，建立標準化核對機制；大幅提升對帳準確率與速度，讓異常帳務無所遁形，協助總部即時掌握精準財務狀況。
+            </div>
+          </div>
+        </div>
+
+        <!-- 核心價值 3 -->
+        <div class="card accent">
+          <div class="value-card-header">
+            <div class="num">03</div>
+            <h3>減少人員重複作業時間｜釋放現場管理動能</h3>
+          </div>
+          <div class="vs-grid">
+            <div class="pain-box">
+              <strong>過去痛點</strong>
+              店長與第一線人員花費過多時間在抄寫、key-in 重複資料、人工排班計算與整理紙本考核紀錄。
+            </div>
+            <div class="gain-box">
+              <strong>產生價值</strong>
+              將例行性文書與資料彙整交由系統自動化處理，大幅縮短人員行政作業時間，讓店長與員工能將寶貴的時間專注於「現場顧客服務」與「門店營運改善」。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote" style="margin-top: 22px;">把繁瑣留給系統，把精準留給數據，把時間還給現場服務。</div>
+    </section>
+
+    <!-- 結語順延為第10頁 -->
+    <section class="page">
+      <div class="page-label">10 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
       <p class="lead">我希望這次升遷不只是個人職涯的提升，而是能夠替公司建立長期可運作、可量化、可複製、可持續改善的管理制度。</p>
       <div class="quote">我願意深入現場了解問題，也願意運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。</div>
       <p>如果公司認同這個方向，我願意承擔更大的責任，與各門店店長、總監及公司管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
