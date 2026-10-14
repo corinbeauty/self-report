@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>賴信吉｜升遷暨職務調整提案</title>
+
+<!-- 給 LINE、Facebook 等社群軟體讀取的預覽標籤 -->
+<meta property="og:title" content="賴信吉｜升遷暨職務調整提案" />
+<meta property="og:description" content="以營運改善、資訊系統與教育訓練，建立可量化、可複製、可持續的公司級管理機制。" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="logo.png" />
+<meta name="description" content="賴信吉｜升遷暨職務調整提案" />
+
+<!-- 引入 Google Fonts 強化專業字體層次 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #1a2421;
+    --ink-light: #3e4c47;
+    --muted: #6c7a75;
+    --green-deep: #133930;
+    --green: #1b4d40;
+    --green-mid: #286656;
+    --sage: #e8f0ec;
+    --sage-light: #f4f8f6;
+    --gold: #b38849;
+    --gold-light: #d9b882;
+    --gold-bg: #faf6ef;
+    --line: #dce3df;
+    --white: #ffffff;
+    --red: #b91c1c;
+    --red-bg: #fef2f2;
+    --shadow: 0 20px 50px rgba(19, 57, 48, 0.12);
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #dfe5e2;
+    color: var(--ink);
+    font-family: "Inter", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 頂部懸浮工具列 */
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(19, 57, 48, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  .toolbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 10.5pt;
+    letter-spacing: 0.05em;
+  }
+  .toolbar-badge {
+    background: var(--gold);
+    color: var(--white);
+    font-size: 8.5pt;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+  .toolbar button {
+    border: 1px solid var(--gold-light);
+    background: linear-gradient(135deg, var(--gold) 0%, #9b7135 100%);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-weight: 700;
+    font-size: 9.5pt;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .toolbar button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(179, 136, 73, 0.4);
+  }
+
+  /* 報表主容器與 A4 頁面設定 */
+  .report {
+    max-width: 210mm;
+    margin: 32px auto 64px;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: var(--white);
+    margin: 0 auto 28px;
+    padding: 18mm 18mm 16mm;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid var(--green);
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* 頁尾設計 */
+  .page-footer {
+    margin-top: auto;
+    padding-top: 3.5mm;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 8.5pt;
+    letter-spacing: 0.05em;
+  }
+  .page-footer b {
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  /* 內頁頂部頁眉標記 */
+  .page-top-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  .section-kicker {
+    font-size: 8.5pt;
+    color: var(--gold);
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .page-label {
+    color: var(--green);
+    font-size: 8.5pt;
+    font-weight: 700;
+    background: var(--sage);
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.06em;
+  }
+
+  /* 標題與文字排版 */
+  h1, h2 {
+    font-family: "Noto Serif TC", "Noto Sans TC", serif;
+  }
+  h1 {
+    font-size: 33pt;
+    line-height: 1.22;
+    letter-spacing: 0.06em;
+    margin: 0 0 18px;
+    color: var(--green-deep);
+    font-weight: 900;
+  }
+  h2 {
+    font-size: 20pt;
+    color: var(--green-deep);
+    line-height: 1.3;
+    margin: 0 0 10px;
+    letter-spacing: 0.03em;
+    font-weight: 900;
+  }
+  h3 {
+    font-size: 12.5pt;
+    color: var(--green-deep);
+    margin: 0 0 6px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  p { margin: 0 0 10px; font-size: 10.5pt; color: var(--ink-light); }
+  .lead {
+    font-size: 11.5pt;
+    line-height: 1.78;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .rule {
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--line) 40%, var(--line) 100%);
+    margin: 16px 0;
+  }
+  .small { font-size: 9.5pt; color: var(--muted); }
+  .text-red {
+    color: var(--red);
+    font-weight: 700;
+    background: var(--red-bg);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+
+  /* 封面專屬樣式 */
+  .cover {
+    border-top: 0;
+    background: linear-gradient(155deg, #ffffff 0%, #f5f9f7 52%, #e6f0ec 100%);
+    justify-content: space-between;
+    padding: 20mm 20mm 16mm;
+  }
+  .cover::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 14px;
+    background: linear-gradient(180deg, var(--green-deep) 0%, var(--green) 65%, var(--gold) 100%);
+  }
+  .cover-deco-circle {
+    position: absolute;
+    width: 180mm;
+    height: 180mm;
+    border-radius: 50%;
+    right: -85mm;
+    top: -45mm;
+    border: 1px solid rgba(179, 136, 73, 0.22);
+    background: radial-gradient(circle, rgba(27, 77, 64, 0.05) 0%, rgba(27, 77, 64, 0) 70%);
+    pointer-events: none;
+  }
+  .cover-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 5;
+    border-bottom: 1px solid rgba(27, 77, 64, 0.15);
+    padding-bottom: 18px;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .logo-img {
+    height: 74px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+  .reporter-info {
+    text-align: right;
+    font-size: 9.5pt;
+    color: var(--ink-light);
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+  }
+  .reporter-info strong { color: var(--green-deep); }
+  .cover-main {
+    position: relative;
+    z-index: 5;
+    margin: auto 0;
+    padding: 10mm 0;
+  }
+  .eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 10pt;
+    font-weight: 800;
+    letter-spacing: 0.24em;
+    margin-bottom: 14px;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 4px;
+  }
+  .cover-sub {
+    font-size: 14pt;
+    color: var(--ink-light);
+    max-width: 145mm;
+    line-height: 1.75;
+    font-weight: 500;
+  }
+  .cover-pillars {
+    display: flex;
+    gap: 10px;
+    margin-top: 26px;
+  }
+  .cover-pillar-tag {
+    background: var(--green-deep);
+    color: var(--white);
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .cover-pillar-tag span { color: var(--gold-light); }
+  .cover-note {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1fr;
+    gap: 16px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  }
+  .cover-note-item small {
+    display: block;
+    font-size: 8.5pt;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 3px;
+  }
+  .cover-note-item b {
+    font-size: 11pt;
+    color: var(--green-deep);
+  }
+
+  /* 網格與卡片元件 */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    background: var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  }
+  .card.accent {
+    border-top: 3.5px solid var(--green);
+    background: linear-gradient(180deg, var(--sage-light) 0%, var(--white) 100%);
+  }
+  .card.gold-accent {
+    border-top: 3.5px solid var(--gold);
+    background: linear-gradient(180deg, var(--gold-bg) 0%, var(--white) 100%);
+  }
+  .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    background: var(--green);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 9.5pt;
+    margin-bottom: 8px;
+  }
+  .pill {
+    display: inline-block;
+    background: var(--sage);
+    color: var(--green-deep);
+    border: 1px solid rgba(27, 77, 64, 0.15);
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 8.5pt;
+    margin: 4px 5px 0 0;
+  }
+  ul { padding-left: 1.2em; margin: 6px 0 0; }
+  li { margin: 4px 0; font-size: 10pt; color: var(--ink-light); }
+  li b { color: var(--ink); }
+
+  /* 引言區塊 */
+  .quote {
+    border-left: 4px solid var(--gold);
+    padding: 11px 16px;
+    background: var(--gold-bg);
+    border-radius: 0 8px 8px 0;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #3f3627;
+    margin: 12px 0;
+    letter-spacing: 0.02em;
+  }
+
+  /* 視覺強調盒 (Highlight) */
+  .highlight {
+    background: linear-gradient(135deg, var(--green-deep) 0%, var(--green) 100%);
+    color: var(--white);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 14px 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .highlight::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(179, 136, 73, 0.15);
+    pointer-events: none;
+  }
+  .highlight h3 {
+    color: var(--gold-light);
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+  }
+  .highlight p { color: rgba(255, 255, 255, 0.92); margin: 0; font-size: 10.5pt; }
+  .highlight .big {
+    font-size: 21pt;
+    font-weight: 900;
+    line-height: 1.3;
+    color: #f7dfc0;
+    margin: 4px 0 6px;
+    letter-spacing: 0.03em;
+  }
+
+  /* 條列目錄區 (TOC) */
+  .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: var(--sage-light);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .toc-item b {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 9pt;
+    flex-shrink: 0;
+  }
+  .toc-item span { font-size: 10pt; font-weight: 700; color: var(--ink); }
+
+  /* 階段流程圖 (Flow) */
+  .flow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 14px 0;
+  }
+  .flow .stage {
+    position: relative;
+    padding: 14px;
+    border-radius: var(--radius);
+    background: linear-gradient(160deg, var(--green-deep) 0%, var(--green) 100%);
+    color: var(--white);
+    border-bottom: 3px solid var(--gold);
+  }
+  .flow .stage:not(:last-child)::after {
+    content: "▸";
+    position: absolute;
+    right: -13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 18px;
+    font-weight: 900;
+    z-index: 2;
+  }
+  .stage-tag {
+    font-size: 8pt;
+    color: var(--gold-light);
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .stage strong {
+    display: block;
+    font-size: 12pt;
+    margin-bottom: 6px;
+    color: var(--white);
+  }
+  .stage small {
+    display: block;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 9.2pt;
+    line-height: 1.55;
+  }
+
+  /* 數據指標列 (Metric) */
+  .metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 10pt;
+  }
+  .metric:last-child { border-bottom: 0; padding-bottom: 0; }
+  .metric span { color: var(--ink-light); }
+  .metric b {
+    color: var(--green-deep);
+    background: var(--sage);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 9pt;
+  }
+
+  /* 編號檢核清單 (Checklist) */
+  .checklist {
+    counter-reset: item;
+    display: grid;
+    gap: 8px;
+  }
+  .checklist > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--sage-light);
+    border: 1px solid var(--line);
+    padding: 8px 14px;
+    border-radius: 8px;
+  }
+  .checklist > div::before {
+    counter-increment: item;
+    content: "0" counter(item);
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--green);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 9pt;
+    flex-shrink: 0;
+  }
+  .checklist-content {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1;
+  }
+  .checklist-content span {
+    font-weight: 700;
+    font-size: 10.5pt;
+    color: var(--green-deep);
+    min-width: 90px;
+  }
+  .checklist-content small {
+    flex: 1;
+    font-size: 9.5pt;
+    color: var(--ink-light);
+  }
+
+  /* 橫向管理循環步驟 (Page 05) */
+  .cycle-bar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin: 12px 0;
+  }
+  .cycle-step {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+    position: relative;
+  }
+  .cycle-step small {
+    display: block;
+    font-size: 8pt;
+    color: var(--gold-light);
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .cycle-step b {
+    font-size: 9.8pt;
+    color: var(--white);
+    display: block;
+    line-height: 1.35;
+  }
+
+  /* 開發程式總覽連結橫幅 */
+  .portfolio-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(90deg, var(--sage-light) 0%, var(--white) 100%);
+    border: 1.5px solid var(--green);
+    padding: 13px 18px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--ink);
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  .portfolio-banner:hover {
+    box-shadow: 0 6px 20px rgba(27, 77, 64, 0.14);
+    transform: translateY(-1px);
+    background: var(--sage);
+  }
+  .portfolio-banner::after {
+    content: "VIEW PORTFOLIO ↗";
+    position: absolute;
+    right: 18px;
+    font-size: 8.5pt;
+    color: var(--green);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    background: var(--white);
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+  }
+  .portfolio-banner .icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    background: var(--green-deep);
+    color: var(--gold-light);
+    border-radius: 8px;
+    font-size: 15pt;
+    flex-shrink: 0;
+  }
+  .portfolio-banner-text strong {
+    display: block;
+    font-size: 11.5pt;
+    color: var(--green-deep);
+    margin-bottom: 2px;
+  }
+  .portfolio-banner-text small {
+    color: var(--muted);
+    font-size: 9.2pt;
+    display: block;
+  }
+
+  /* 預計開發系統區塊 */
+  .roadmap-section {
+    margin-top: 14px;
+    border-top: 1px dashed var(--line);
+    padding-top: 14px;
+  }
+  .roadmap-title {
+    font-size: 10pt;
+    color: var(--green-deep);
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.04em;
+  }
+  .roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .roadmap-card {
+    background: var(--gold-bg);
+    border: 1px solid rgba(179, 136, 73, 0.35);
+    padding: 10px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .roadmap-card-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .roadmap-card .bullet {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .roadmap-card span {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #3f3627;
+  }
+  .roadmap-card small {
+    font-size: 8pt;
+    color: var(--gold);
+    font-weight: 700;
+    background: var(--white);
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid rgba(179, 136, 73, 0.25);
+  }
+
+  /* 三大核心價值對比卡片 (Page 09) */
+  .value-stack {
+    display: grid;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .value-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .value-card-header .num { margin-bottom: 0; flex-shrink: 0; }
+  .value-card-header h3 { margin: 0; font-size: 12.5pt; }
+  .vs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 12px;
+  }
+  .pain-box {
+    background: #fcf4f4;
+    border: 1px solid #f2dada;
+    border-left: 3.5px solid #c95b5b;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 9.8pt;
+    color: #573c3c;
+    line-height: 1.58;
+  }
+  .pain-box strong {
+    display: inline-block;
+    color: #a63a3a;
+    font-size: 8.5pt;
+    background: #fae6e6;
+    padding: 1px 7px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    letter-spacing: 0.05em;
+  }
+  .gain-box {
+    background: #f1f8f4;
+    border: 1px solid #d2e7dc;
+    border-left: 3.5px solid var(--green);
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 9.8pt;
+    color: var(--ink);
+    line-height: 1.58;
+  }
+  .gain-box strong {
+    display: inline-block;
+    color: var(--green-deep);
+    font-size: 8.5pt;
+    background: #dcece4;
+    padding: 1px 7px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    letter-spacing: 0.05em;
+  }
+
+  /* 響應式手機版適配 */
+  @media (max-width: 900px) {
+    body { background: #fff; }
+    .toolbar { padding: 10px 16px; }
+    .report { margin: 0 auto; max-width: 100%; }
+    .page {
+      width: 100%;
+      min-height: auto;
+      margin: 0;
+      padding: 28px 20px 36px;
+      box-shadow: none;
+      border-bottom: 10px solid #e9eeeb;
+    }
+    h1 { font-size: 25pt; }
+    h2 { font-size: 17.5pt; }
+    .grid-2, .grid-3, .vs-grid, .toc, .roadmap-grid, .cover-note {
+      grid-template-columns: 1fr;
+    }
+    .flow { grid-template-columns: 1fr; }
+    .flow .stage:not(:last-child)::after { display: none; }
+    .cycle-bar { grid-template-columns: 1fr; }
+    .cover-pillars { flex-wrap: wrap; }
+    .portfolio-banner::after { position: static; display: inline-block; margin-top: 6px; }
+    .portfolio-banner { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* 嚴格 A4 列印樣式控制 */
+  @media print {
+    @page { size: A4 portrait; margin: 0; }
+    body {
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .toolbar { display: none !important; }
+    .report { margin: 0; max-width: none; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: 210mm;
+      height: 297mm;
+      min-height: 297mm;
+      padding: 16mm 18mm 14mm;
+      page-break-after: always;
+      break-after: page;
+    }
+    .page:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- 頂部操作列 -->
+  <div class="toolbar">
+    <div class="toolbar-brand">
+      <span class="toolbar-badge">PROPOSAL</span>
+      <span>不老松足湯養身行館｜賴信吉 升遷暨職務調整提案</span>
+    </div>
+    <button onclick="window.print()">🖨️ 列印 ／ 另存標準 A4 PDF</button>
+  </div>
+
+  <main class="report">
+
+    <!-- ==================== 封面 ==================== -->
+    <section class="page cover">
+      <div class="cover-deco-circle"></div>
+
+      <div class="cover-header">
+        <div class="brand">
+          <img src="logo.png" alt="不老松足湯養身行館" class="logo-img" onerror="this.style.display='none'">
+        </div>
+        <div class="reporter-info">
+          提案報告人：<strong>賴信吉</strong><br>
+          提案日期：2026 / 10 / 10
+        </div>
+      </div>
+
+      <div class="cover-main">
+        <div class="eyebrow">CAREER &amp; ORGANIZATION PROPOSAL</div>
+        <h1>升遷暨職務<br/>調整提案報告</h1>
+        <p class="cover-sub">
+          以「營運改善、資訊系統、教育訓練」三大支柱，將第一線實務經驗轉化為可量化、可複製、可持續的公司級管理機制。
+        </p>
+        <div class="cover-pillars">
+          <div class="cover-pillar-tag"><span>01</span> 跨店營運改善</div>
+          <div class="cover-pillar-tag"><span>02</span> 資訊系統統籌</div>
+          <div class="cover-pillar-tag"><span>03</span> 培訓制度建置</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="cover-note">
+          <div class="cover-note-item">
+            <small>Target Position｜建議職務定位</small>
+            <b>營運改善暨資訊系統主管</b>
+          </div>
+          <div class="cover-note-item">
+            <small>Management Scope｜統籌涵蓋範圍</small>
+            <b>全台 22 家門店跨店管理與數位化</b>
+          </div>
+          <div class="cover-note-item">
+            <small>Core Objective｜核心管理目標</small>
+            <b>數據驅動・制度落地・系統賦能</b>
+          </div>
+        </div>
+        <div class="page-footer" style="border-top:0; padding-top:10px;">
+          <span><b>不老松足湯養身行館</b>｜內部管理組織升級提案</span>
+          <span>CONFIDENTIAL DOCUMENT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 第 01 頁：提案摘要 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Executive Summary</div>
+        <div class="page-label">01 / 提案摘要</div>
+      </div>
+
+      <h2>從個人實務能力，升級為公司級管理價值</h2>
+      <p class="lead">
+        感謝公司對我的肯定，以及願意賦予我更大的發展舞台。針對此次前往其他門店協助改善營運的安排，我願意承擔更大責任，並期望將「門店管理經驗、程式開發能力及系統架構思維」，深度轉化為能長期協助公司擴展的管理資產。
+      </p>
+
+      <div class="quote">
+        這次職務調整不只是單純的個人升遷，而是替公司整合「營運管理 × 資訊系統 × 教育訓練」三大面向的系統性升級。
+      </div>
+
+      <div class="grid-3" style="margin-top: 10px;">
+        <div class="card accent">
+          <div class="num">01</div>
+          <h3>現場落地</h3>
+          <p>深入北、中、南各門店，從第一線實際作業理解痛點與需求，建立真正符合現場運作的改善制度。</p>
+        </div>
+        <div class="card accent">
+          <div class="num">02</div>
+          <h3>數據追蹤</h3>
+          <p>統一各店指標與回報方式，以客觀營運數據、執行率及品質指標，精準追蹤每一項改善成果。</p>
+        </div>
+        <div class="card accent">
+          <div class="num">03</div>
+          <h3>持續複製</h3>
+          <p>把個人改善經驗轉化為標準制度、培訓教材及系統功能，讓成功模式可快速於 22 家門店跨店推廣。</p>
+        </div>
+      </div>
+
+      <div class="rule"></div>
+
+      <h3>提案四大核心交付成果</h3>
+      <div class="toc">
+        <div class="toc-item"><b>A</b><span>建立跨店營運診斷、改善與問題追蹤機制</span></div>
+        <div class="toc-item"><b>B</b><span>統籌全台 22 家門店資訊系統規劃、開發與維護</span></div>
+        <div class="toc-item"><b>C</b><span>建置新人、主管與晉升培訓的數位標準化制度</span></div>
+        <div class="toc-item"><b>D</b><span>形成「發現問題 → 分析 → 改善 → 驗收」管理閉環</span></div>
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 01 / 10</span>
+      </div>
+    </section>
+
+    <!-- ==================== 第 02 頁：職務定位 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Role Definition</div>
+        <div class="page-label">02 / 職務定位</div>
+      </div>
+
+      <h2>三大核心職責，對應公司級管理任務</h2>
+      <p class="lead">
+        將原本分散於現場作業、資訊工具與人員培訓的管理需求，收斂為具備連貫性的三大核心職責：
+      </p>
+
+      <div class="card accent" style="margin-bottom: 12px;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+          <div class="num" style="margin:0;">01</div>
+          <h3 style="margin:0;">營運管理與跨店改善</h3>
+        </div>
+        <p>協助診斷並處理問題門店的營運績效、人員管理、服務品質及工作流程；與店長、總監及督導共同分析問題根源、制定具體改善方案並定期追蹤執行成果。</p>
+        <div><span class="pill">第一線現場觀察</span><span class="pill">作業流程優化</span><span class="pill">跨店經驗複製</span></div>
+      </div>
+
+      <div class="card accent" style="margin-bottom: 12px;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+          <div class="num" style="margin:0;">02</div>
+          <h3 style="margin:0;">資訊系統規劃、開發與維護</h3>
+        </div>
+        <p>負責全台 22 家門店的內部資訊系統規劃、架構設計、程式開發、功能優化及持續維運，逐步打造整合性、標準化且高度貼合現場作業的數位管理平台。</p>
+        <div><span class="pill">企業雲端架構</span><span class="pill">需求優先序管理</span><span class="pill">全店數位轉型</span></div>
+      </div>
+
+      <div class="card accent">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+          <div class="num" style="margin:0;">03</div>
+          <h3 style="margin:0;">教育訓練與人才培育制度</h3>
+        </div>
+        <p>建立新人訓練、主管培訓、晉升評核及標準作業流程（SOP）；結合數位系統工具，完整留存訓練紀錄、執行進度、考核結果與後續追蹤機制。</p>
+        <div><span class="pill">標準教材制度</span><span class="pill">管理職能培訓</span><span class="pill">量化晉升評核</span></div>
+      </div>
+
+      <div class="highlight">
+        <h3>Core Value Proposition｜職務價值主張</h3>
+        <p>讓資訊系統不只是被動的輔助工具，而是主動連結「現場營運、人才培育與高階管理決策」的核心基礎建設。</p>
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 02 / 10</span>
+      </div>
+    </section>
+
+    <!-- ==================== 第 03 頁：執行架構 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Operating Model</div>
+        <div class="page-label">03 / 執行架構</div>
+      </div>
+
+      <h2>前端 × 中端 × 後端 三位一體整合模式</h2>
+      <p class="lead">
+        為避免升任管理職後與第一線現場作業脫軌，採取「前端實地操作、中端協同改善、後端數位管理」的閉環工作模式，<span class="text-red">確保所有制度與系統真正符合現場需求。</span>
+      </p>
+
+      <div class="flow">
+        <div class="stage">
+          <span class="stage-tag">STAGE 01</span>
+          <strong>前端｜看見問題</strong>
+          <small>深入北、中、南門店實地操作、觀察服務流程、蒐集第一線痛點並建立基礎數據。</small>
+        </div>
+        <div class="stage">
+          <span class="stage-tag">STAGE 02</span>
+          <strong>中端｜共同改善</strong>
+          <small>與店長、總監及督導共同剖析原因，明確規劃責任分工、人員訓練與改善期限。</small>
+        </div>
+        <div class="stage">
+          <span class="stage-tag">STAGE 03</span>
+          <strong>後端｜形成系統</strong>
+          <small>將問題、方案與教材全面數位化，建立線上回報、追蹤、驗收與結案管理機制。</small>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card accent">
+          <h3>前端：實地操作與數據蒐集</h3>
+          <ul>
+            <li>實地了解人員作業、服務動線、營運管理與系統實際使用情況。</li>
+            <li>將過往主觀的口頭回報與個人經驗判斷，轉換為<b>可量化、可比較、可追蹤</b>的客觀指標。</li>
+            <li>建立改善前後的基準線（Baseline），讓管理決策具備真實數據依據。</li>
+          </ul>
+        </div>
+        <div class="card accent">
+          <h3>中端：協同改善與訓練規劃</h3>
+          <ul>
+            <li>精準找出影響門店效率、服務品質與團隊執行力的關鍵瓶頸。</li>
+            <li>與現場主管共識改善方案、明確訂定責任分工與完成期限。</li>
+            <li>把單一門店的個別問題解決經驗，淬鍊為可跨店複製推廣的標準方案。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card gold-accent" style="margin-top: 12px;">
+        <h3>後端：教育訓練數位化、系統固化與管理回報</h3>
+        <div class="grid-2">
+          <ul>
+            <li><b>標準教材與 SOP 數位化管理</b>，確保各店資訊一致。</li>
+            <li><b>新人、主管與晉升考核紀錄</b>雲端留存與歷程查詢。</li>
+            <li><b>各門店改善執行進度</b>與定期自動化回報機制。</li>
+          </ul>
+          <ul>
+            <li><b>異常事件、問題通報與改善追蹤</b>單一入口管理。</li>
+            <li><b>營運指標、目標達成率</b>與 22 家門店跨店橫向比較。</li>
+            <li><b>高階管理報表與即時數據儀表板</b>（Dashboard）。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 03 / 10</span>
+      </div>
+    </section>
+
+    <!-- ==================== 第 04 頁：數據管理 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Data-Driven Management</div>
+        <div class="page-label">04 / 數據管理</div>
+      </div>
+
+      <h2>從經驗直覺管理，走向客觀成果管理</h2>
+      <p class="lead">
+        數據導向並非單純追求冰冷數字，而是透過標準化的客觀資料，協助各級管理者看清問題本質、判斷改善優先順序，並具體確認執行成效。
+      </p>
+
+      <div class="grid-2">
+        <div class="card accent">
+          <h3>01｜營運績效管理</h3>
+          <div class="metric"><span>各店營業額表現</span><b>目標達成率</b></div>
+          <div class="metric"><span>來客數與時段分佈</span><b>平均客單價</b></div>
+        </div>
+        <div class="card accent">
+          <h3>02｜人員與培訓管理</h3>
+          <div class="metric"><span>人員出勤與排班狀況</span><b>工作執行率</b></div>
+          <div class="metric"><span>標準培訓完成率</span><b>晉升考核結果</b></div>
+        </div>
+        <div class="card accent">
+          <h3>03｜服務品質管理</h3>
+          <div class="metric"><span>客訴件數與類別分析</span><b>顧客評價趨勢</b></div>
+          <div class="metric"><span>熟客回訪狀況追蹤</span><b>缺失改善完成率</b></div>
+        </div>
+        <div class="card accent">
+          <h3>04｜作業效率與系統應用</h3>
+          <div class="metric"><span>跨店問題處理時間</span><b>標準流程完成率</b></div>
+          <div class="metric"><span>帳務與作業異常件數</span><b>資料填報完整率</b></div>
+        </div>
+      </div>
+
+      <div class="rule"></div>
+
+      <h3>PDCA 五步驟數據管理循環</h3>
+      <div class="checklist">
+        <div>
+          <div class="checklist-content">
+            <span>建立數據標準</span>
+            <small>統一全台 22 家門店之指標定義、資料欄位格式與定期回報規範。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>建立量化目標</span>
+            <small>依據改善專案與日常工作性質，明確設定目標值、完成期限與當責人員。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>建立追蹤機制</span>
+            <small>透過系統即時記錄各店執行進度、異常卡關狀況與階段性改善結果。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>建立數據分析</span>
+            <small>橫向比較各門店表現與縱向檢視改善前後差異，找出關鍵原因及標竿做法。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>建立持續改善</span>
+            <small>將數據分析結論回饋至現場作業流程、人員教育訓練與系統功能迭代優化。</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 04 / 10</span>
+      </div>
+    </section>
+
+    <!-- ==================== 第 05 頁：管理目標 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Management Outcomes</div>
+        <div class="page-label">05 / 管理目標</div>
+      </div>
+
+      <h2>把優秀現場經驗，轉化為公司永續制度</h2>
+
+      <div class="highlight" style="margin-top: 6px;">
+        <h3>Core Management Loop｜五大核心管理閉環</h3>
+        <div class="cycle-bar">
+          <div class="cycle-step"><small>STEP 01</small><b>現場發現問題</b></div>
+          <div class="cycle-step"><small>STEP 02</small><b>數據分析原因</b></div>
+          <div class="cycle-step"><small>STEP 03</small><b>跨部門共識改善</b></div>
+          <div class="cycle-step"><small>STEP 04</small><b>教育訓練落實</b></div>
+          <div class="cycle-step"><small>STEP 05</small><b>系統持續追蹤</b></div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top: 14px;">
+        <div class="card accent">
+          <h3>對各門店的直接效益</h3>
+          <ul>
+            <li><b>提升營運效率</b>與跨班別、跨店的管理一致性。</li>
+            <li><b>大幅降低重複人工文書作業</b>與跨店溝通資訊落差。</li>
+            <li><b>縮短問題從發現、通報到處理完成</b>的反應時間。</li>
+            <li>讓每一項改善成果皆<b>有跡可循、可被客觀檢視與追蹤</b>。</li>
+          </ul>
+        </div>
+        <div class="card accent">
+          <h3>對總部與公司的長期效益</h3>
+          <ul>
+            <li>建立<b>不因人員異動而斷層</b>、可跨店複製的標準管理制度。</li>
+            <li>全面提升基層與儲備幹部的<b>人才培育速度與晉升品質</b>。</li>
+            <li>讓高階管理決策更具備<b>即時數據透明度與客觀依據</b>。</li>
+            <li>逐步構築支撐未來展店與擴張的<b>公司級數位管理基礎</b>。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rule"></div>
+
+      <h3>預期長期組織價值</h3>
+      <p class="lead">
+        透過「前端實地了解、中端協同改善及後端數位整合」，將個人的管理經驗轉化為公司制度，將繁瑣的現場作業轉化為結構化數據，將管理者的需求轉化為系統功能，最終建立一套能自主運作、跨店複製並不斷優化的現代化管理架構。
+      </p>
+      <div class="quote">
+        這不只是單點協助單一門店解決眼前問題，而是站在全公司戰略高度，全面提升 22 家門店的管理效率、執行一致性、人才培育能力及整體營運品質。
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 05 / 10</span>
+      </div>
+    </section>
+
+    <!-- ==================== 第 06 頁：職稱與薪資 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Position &amp; Compensation</div>
+        <div class="page-label">06 / 職稱與薪資</div>
+      </div>
+
+      <h2>職責範圍、管理權限與回報機制相互對應</h2>
+
+      <div class="grid-2" style="margin-top: 8px;">
+        <div class="card accent">
+          <small class="section-kicker">Recommended Title｜建議正式職稱</small>
+          <p style="font-size: 16.5pt; color: var(--green-deep); font-weight: 900; margin: 6px 0 8px;">
+            營運改善暨資訊系統主管
+          </p>
+          <p style="margin:0;">正式承接跨店營運診斷改善、全公司資訊系統開發管理及教育訓練制度建置三大職責。</p>
+        </div>
+        <div class="card gold-accent">
+          <small class="section-kicker">Future Alignment｜長期組織延伸討論</small>
+          <p style="font-size: 13pt; color: #3f3627; font-weight: 800; margin: 6px 0 8px;">
+            資訊長 (CIO) ＆ 教育訓練主管
+          </p>
+          <p style="margin:0;">若公司期望由我長期統籌全公司資訊戰略、系統架構與數位化發展，亦希望能進一步討論對應之職務定位與權責。</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <h3>Compensation Adjustment｜薪資調整期望</h3>
+        <div class="big">每月薪資增加 NT$ 28,000</div>
+        <p>此調整金額係針對「新增跨店與全公司級別職務的整體長期責任」所提出，並非單一系統或單次外包專案的開發費用（以目前負責 22 家門店規模換算，平均每店每月僅約 NT$ 1,270 之管理與系統研發投入）。</p>
+      </div>
+
+      <h3>新增職務責任涵蓋範疇</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h3>01｜跨店營運改善</h3>
+          <p class="small" style="margin:0;">北中南問題門店實地診斷、流程改造與改善成效追蹤。</p>
+        </div>
+        <div class="card">
+          <h3>02｜22 店資訊系統統籌</h3>
+          <p class="small" style="margin:0;">全公司內部系統架構設計、自主程式開發與日常維運。</p>
+        </div>
+        <div class="card">
+          <h3>03｜數據與培訓制度</h3>
+          <p class="small" style="margin:0;">建立數據化管理指標、標準教材與考核追蹤體系。</p>
+        </div>
+      </div>
+
+      <div class="quote" style="margin-top: 14px;">
+        期望薪資待遇、正式職稱、工作責任與管理權限能夠相互匹配，讓我能以明確的職務定位與合理資源配置，全心且長期地承擔公司級管理任務。
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 06 / 10</span>
+      </div>
+    </section>
+
+    <!-- ==================== 第 07 頁：權責與執行 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Governance &amp; Execution</div>
+        <div class="page-label">07 / 權責與執行</div>
+      </div>
+
+      <h2>正式職務調整時，建議一併確認之七項治理機制</h2>
+
+      <div class="checklist">
+        <div>
+          <div class="checklist-content">
+            <span>職務定位與權限</span>
+            <small>確認正式職稱、跨店工作範圍、直接匯報對象及專案決策權限。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>原店交接安排</span>
+            <small>確認原門店常規職務之交接時程，以及轉任跨店支援後的時間配置。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>跨區巡店配置</span>
+            <small>規劃北、中、南門店實地操作、駐點診斷與巡店的頻率及差旅規範。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>系統開發治理</span>
+            <small>建立 22 家門店之需求提出窗口、開發優先順序評估、測試驗收與維運機制。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>訓練推動權責</span>
+            <small>明確教育訓練制度的推動權限、各門店店長配合方式及落地執行責任。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>成果評估指標</span>
+            <small>共識階段性量化目標、改善成果評估方式及跨部門所需協作資源。</small>
+          </div>
+        </div>
+        <div>
+          <div class="checklist-content">
+            <span>正式任命與薪資</span>
+            <small>確認薪資調整金額、正式生效日期及公司內部職務任命公告方式。</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card gold-accent" style="margin-top: 12px;">
+        <h3>系統需求管理原則（避免開發資源分散）</h3>
+        <p style="margin:0;">由於資訊系統涵蓋全台 22 家門店，後續必然涉及不同門店的個別需求、功能調整、系統穩定性及日常維護。因此必須建立明確的「需求評估與排程機制」，避免所有臨時需求同時湧入開發流程，確保核心系統穩定與整體專案品質。</p>
+      </div>
+
+      <h3 style="margin-top: 14px;">建議之週期性管理節奏</h3>
+      <div class="grid-3">
+        <div class="card accent">
+          <b style="color:var(--green-deep); font-size:10.5pt;">每週｜Weekly</b>
+          <p class="small" style="margin:4px 0 0;">各店問題與系統需求彙整、開發與改善進度回報、緊急異常排除。</p>
+        </div>
+        <div class="card accent">
+          <b style="color:var(--green-deep); font-size:10.5pt;">每月｜Monthly</b>
+          <p class="small" style="margin:4px 0 0;">22 店營運數據指標檢視、跨店績效比較、專案階段性改善驗收。</p>
+        </div>
+        <div class="card accent">
+          <b style="color:var(--green-deep); font-size:10.5pt;">每季｜Quarterly</b>
+          <p class="small" style="margin:4px 0 0;">管理制度全面盤點、教育訓練成效檢討與下一階段系統藍圖規劃。</p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 07 / 10</span>
+      </div>
+    </section>
+
+    <!-- ==================== 第 08 頁：系統架構與藍圖 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Architecture &amp; Roadmap</div>
+        <div class="page-label">08 / 系統架構與藍圖</div>
+      </div>
+
+      <h2>採用 Google 企業級雲端基礎設施</h2>
+      <p class="lead">
+        為確保高穩定性並加速開發時程，系統後端全面採用 <strong>Google Cloud (GCP) 與 Firebase 企業級開發平台</strong>，徹底免除傳統本地端主機當機風險與硬體維護成本；並可直接結合公司既有之 Google Workspace 進行資產與帳號集中管理。
+      </p>
+
+      <div class="card accent">
+        <h3 style="margin-bottom: 10px;">Google Cloud &amp; Firebase 核心技術架構</h3>
+        <div class="grid-2">
+          <ul style="margin:0;">
+            <li style="margin-bottom:6px;"><b>公司 Google 管理帳號：</b><br>由公司最高權限帳號統一持有雲端資產。</li>
+            <li style="margin-bottom:6px;"><b>Google Cloud 專案與帳務：</b><br>集中管理 API 調用、組織權限與雲端帳單。</li>
+            <li style="margin-bottom:6px;"><b>Firebase Authentication：</b><br>建立嚴密之員工登入與身分安全驗證機制。</li>
+            <li style="margin-bottom:0;"><b>Cloud Firestore 資料庫：</b><br>高即時性、高擴充性之企業核心雲端資料庫。</li>
+          </ul>
+          <ul style="margin:0;">
+            <li style="margin-bottom:6px;"><b>Firebase Hosting：</b><br>全球 CDN 加速之安全網頁與系統前端部署。</li>
+            <li style="margin-bottom:6px;"><b>GitHub Repository：</b><br>完整保存系統原始碼、版本控制與修改軌跡。</li>
+            <li style="margin-bottom:6px;"><b>IAM 資安規則與自動備份：</b><br>嚴格控管資料讀寫權限、保障商業機密安全。</li>
+            <li style="margin-bottom:0;"><b>Cloud Logging 與預算警示：</b><br>即時追蹤系統異常並設定費用上限防止超支。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card gold-accent" style="margin-top: 12px; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+        <div>
+          <strong style="color:var(--green-deep); font-size:10.5pt; display:block;">💡 極具成本效益的雲端維運模式</strong>
+          <span class="small">免除動輒數十萬的傳統伺服器採購與外包維護費，依實際儲存量與流量計費。</span>
+        </div>
+        <div style="text-align:right; flex-shrink:0;">
+          <small class="small" style="display:block;">初期預估每月雲端成本</small>
+          <b style="font-size:13.5pt; color:var(--green-deep);">NT$ 300 ～ 3,000 / 月</b>
+        </div>
+      </div>
+
+      <div style="margin-top: 14px;">
+        <a href="#" class="portfolio-banner">
+          <div class="icon">💻</div>
+          <div class="portfolio-banner-text">
+            <strong>目前已開發完成之內部系統作品總覽</strong>
+            <small>點擊檢視現有已上線與實測中之系統開發成果（連結持續更新）</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="roadmap-section">
+        <div class="roadmap-title">⚙️ 下一階段預計開發系統藍圖 (System Roadmap)</div>
+        <div class="roadmap-grid">
+          <div class="roadmap-card">
+            <div class="roadmap-card-left"><div class="bullet"></div><span>跨店財務自動對帳系統</span></div>
+            <small>PRIORITY 01</small>
+          </div>
+          <div class="roadmap-card">
+            <div class="roadmap-card-left"><div class="bullet"></div><span>全公司人才管理與培訓資料庫</span></div>
+            <small>PRIORITY 02</small>
+          </div>
+          <div class="roadmap-card">
+            <div class="roadmap-card-left"><div class="bullet"></div><span>跨店人力風險與黑名單系統</span></div>
+            <small>PRIORITY 03</small>
+          </div>
+          <div class="roadmap-card">
+            <div class="roadmap-card-left"><div class="bullet"></div><span>門店設備線上報修與追蹤系統</span></div>
+            <small>PRIORITY 04</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 08 / 10</span>
+      </div>
+    </section>
+
+    <!-- ==================== 第 09 頁：數位工具核心價值 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Core Value Proposition</div>
+        <div class="page-label">09 / 數位工具核心價值</div>
+      </div>
+
+      <h2>數位工具導入之三大核心管理價值</h2>
+      <p class="lead">
+        透過自主開發系統與標準化數位工具，直接解決 22 家門店跨店管理最耗時的三大痛點，將寶貴的人力與時間還給第一線顧客服務：
+      </p>
+
+      <div class="value-stack">
+        <!-- 核心價值 1 -->
+        <div class="card accent">
+          <div class="value-card-header">
+            <div class="num">01</div>
+            <h3>大幅降低跨店溝通成本｜資訊同步零時差</h3>
+          </div>
+          <div class="vs-grid">
+            <div class="pain-box">
+              <strong>BEFORE｜過去現場痛點</strong><br>
+              高度依賴 LINE 群組、電話或口頭交辦，重要訊息極易被洗版遺漏，跨部門與跨店來回確認耗費大量管理心力。
+            </div>
+            <div class="gain-box">
+              <strong>AFTER｜系統導入價值</strong><br>
+              建立「單一數位資訊入口」（如線上報修、問題通報、改善進度追蹤），所有處理狀態一目了然，徹底省去重複詢問與人工催促的溝通成本。
+            </div>
+          </div>
+        </div>
+
+        <!-- 核心價值 2 -->
+        <div class="card accent">
+          <div class="value-card-header">
+            <div class="num">02</div>
+            <h3>財務數據統整與精準核對｜帳務透明自動化防呆</h3>
+          </div>
+          <div class="vs-grid">
+            <div class="pain-box">
+              <strong>BEFORE｜過去現場痛點</strong><br>
+              22 家門店各自結算、仰賴人工彙整報表，不僅極度耗時，且容易發生人工計算疏漏或表格格式不一，對帳成本極高。
+            </div>
+            <div class="gain-box">
+              <strong>AFTER｜系統導入價值</strong><br>
+              透過財務對帳系統自動匯入並統整各店數據，建立標準化防呆核對機制；大幅提升對帳準確率與速度，讓異常帳務即時顯現，協助總部精準掌握財務。
+            </div>
+          </div>
+        </div>
+
+        <!-- 核心價值 3 -->
+        <div class="card accent">
+          <div class="value-card-header">
+            <div class="num">03</div>
+            <h3>減少人員重複作業時間｜釋放現場服務與管理動能</h3>
+          </div>
+          <div class="vs-grid">
+            <div class="pain-box">
+              <strong>BEFORE｜過去現場痛點</strong><br>
+              店長與第一線人員花費過多時間在紙本抄寫、重複 Key-in 資料、人工排班計算與整理紙本訓練考核紀錄。
+            </div>
+            <div class="gain-box">
+              <strong>AFTER｜系統導入價值</strong><br>
+              將例行性文書與資料彙整全面交由系統自動化處理，大幅縮短行政作業時間，讓店長與員工能將精力專注於「現場顧客服務」與「門店營運改善」。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote" style="margin-top: 14px;">
+        把繁瑣留給系統，把精準留給數據，把時間還給現場服務。
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 09 / 10</span>
+      </div>
+    </section>
+
+    <!-- ==================== 第 10 頁：結語與雙方權益保障 ==================== -->
+    <section class="page">
+      <div class="page-top-meta">
+        <div class="section-kicker">Closing &amp; Mutual Commitment</div>
+        <div class="page-label">10 / 結語與權責保障</div>
+      </div>
+
+      <h2>一起把管理升級，轉化為公司的長期競爭力</h2>
+      <p class="lead">
+        我由衷希望這次升遷不只是個人職涯的提升，而是能夠替不老松建立一套長期可運作、可量化、可複製、可持續改善的現代化管理制度。
+      </p>
+
+      <div class="quote">
+        我願意深入第一線現場解決問題，更願意運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。
+      </div>
+
+      <p>
+        若公司認同這個發展方向，我已準備好承擔更大的責任，與各門店店長、總監及總部管理團隊緊密合作，讓「現場營運、資訊系統與教育訓練」形成完整的管理生態系，為公司創造長期且穩健的成長價值。
+      </p>
+
+      <div class="grid-3" style="margin: 14px 0;">
+        <div class="card accent">
+          <h3>01｜可落地</h3>
+          <p style="margin:0;">從第一線現場出發，確保每一項制度與系統功能真正符合實務工作流程。</p>
+        </div>
+        <div class="card accent">
+          <h3>02｜可衡量</h3>
+          <p style="margin:0;">以客觀數據追蹤改善進度，讓管理投入與實際成果清楚可見。</p>
+        </div>
+        <div class="card accent">
+          <h3>03｜可持續</h3>
+          <p style="margin:0;">透過標準化訓練、雲端系統與治理機制，內化為公司的長期組織能力。</p>
+        </div>
+      </div>
+
+      <div class="card gold-accent" style="margin-top: 6px;">
+        <h3 style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <span>⚖️</span> 系統開發及維護責任條款（保障公司與雙方權益草案）
+        </h3>
+        <ul style="margin:0;">
+          <li style="margin-bottom:5px;"><b>系統所有權與智慧財產權：</b>本人於任職期間內，因職務所需規劃與開發之系統架構、原始程式碼及相關技術文件，其智慧財產權與所有權均歸屬公司所有。</li>
+          <li style="margin-bottom:5px;"><b>開發範圍與排程管理：</b>各店系統需求與新增功能，需經雙方評估合理性與優先順序後排入正式開發排程，以確保核心系統穩定性及日常營運順暢。</li>
+          <li style="margin-bottom:5px;"><b>維運責任與完整交接承諾：</b>任職期間負有維持系統穩定運作之責任；未來若遇職務異動，承諾提供完整系統操作文件、架構說明及原始碼，確實完成技術交接。</li>
+          <li style="margin-bottom:0;"><b>資料安全與嚴格保密義務：</b>於系統開發及維護過程中所接觸之公司營業秘密、財務數據、人事資料及客戶資訊，均嚴格遵守公司資安與保密規範。</li>
+        </ul>
+      </div>
+
+      <div class="page-footer">
+        <span><b>不老松｜升遷暨職務調整提案</b> — 報告人：賴信吉</span>
+        <span>PAGE 10 / 10</span>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
