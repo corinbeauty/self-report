@@ -222,6 +222,64 @@
       color: #4b4438;
   }
 
+  /* L1-L5 成熟度指標專用樣式 */
+  .maturity-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 24px;
+  }
+  .maturity-step {
+      display: flex;
+      gap: 16px;
+      background: #fbfcfb;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px 20px;
+      align-items: center;
+      position: relative;
+      transition: all 0.2s;
+  }
+  .maturity-step:hover {
+      border-color: var(--green);
+      background: var(--white);
+      box-shadow: 0 4px 12px rgba(31,90,77,.08);
+  }
+  .maturity-step .level {
+      font-size: 18pt;
+      font-weight: 900;
+      color: var(--gold);
+      min-width: 48px;
+      text-align: center;
+  }
+  .maturity-step .content {
+      flex: 1;
+  }
+  .maturity-step .content h4 {
+      margin: 0 0 4px 0;
+      font-size: 12.5pt;
+      color: var(--green);
+  }
+  .maturity-step .content p {
+      margin: 0;
+      font-size: 10pt;
+      color: var(--muted);
+  }
+  .maturity-step .value {
+      text-align: right;
+      color: var(--ink);
+      font-size: 10.5pt;
+      padding-left: 16px;
+      border-left: 1px dashed var(--line);
+      min-width: 140px;
+  }
+  .maturity-step .value strong {
+      display: block;
+      color: var(--green);
+      font-size: 11pt;
+      margin-bottom: 2px;
+  }
+
   /* 三大核心價值卡片樣式 */
   .value-stack {
       display: grid;
@@ -319,6 +377,8 @@
         grid-template-columns: 1fr;
     }
     .roi-chart-wrapper { padding: 16px; }
+    .maturity-step { flex-direction: column; text-align: center; gap: 10px; }
+    .maturity-step .value { text-align: center; padding-left: 0; border-left: none; border-top: 1px dashed var(--line); padding-top: 10px; min-width: auto; width: 100%; }
   }
   @media print{
     @page{size:A4 portrait;margin:0}
@@ -630,8 +690,79 @@
       </div>
     </section>
 
+    <!-- 新增：第 10 頁 系統落地的成熟度指標 -->
     <section class="page">
-      <div class="page-label">10 / 數位工具核心價值</div><div class="section-kicker">Core Value Proposition</div><h2>數位工具導入之三大核心價值</h2>
+      <div class="page-label">10 / 系統導入與驗證指標</div><div class="section-kicker">Lifecycle &amp; Maturity</div>
+      <h2>系統落地的五階段成熟度指標</h2>
+      <p class="lead">為確保開發資源真正轉化為管理價值，我針對系統生命週期建立了一套 L1 到 L5 的分級驗證機制。系統的價值不在於「開發完成」，而在於「實際產生效益並能跨店推廣」。</p>
+
+      <div class="maturity-timeline">
+          
+          <div class="maturity-step">
+              <div class="level">L1</div>
+              <div class="content">
+                  <h4>開發完成</h4>
+                  <p>系統功能已開發完畢，但尚未投入正式使用。</p>
+              </div>
+              <div class="value">
+                  <strong>價值定位</strong>
+                  已具備開發成果
+              </div>
+          </div>
+
+          <div class="maturity-step">
+              <div class="level">L2</div>
+              <div class="content">
+                  <h4>正式上線</h4>
+                  <p>系統已部署於雲端，具備實務上的連線與使用條件。</p>
+              </div>
+              <div class="value">
+                  <strong>價值定位</strong>
+                  已具備交付能力
+              </div>
+          </div>
+
+          <div class="maturity-step">
+              <div class="level">L3</div>
+              <div class="content">
+                  <h4>實際使用</h4>
+                  <p>已有同事或特定門店開始在日常作業中實際登入與操作。</p>
+              </div>
+              <div class="value">
+                  <strong>價值定位</strong>
+                  已開始產生使用價值
+              </div>
+          </div>
+
+          <div class="maturity-step">
+              <div class="level">L4</div>
+              <div class="content">
+                  <h4>成效驗證</h4>
+                  <p>累積完整使用紀錄，可對比導入前後的效率與營運數據。</p>
+              </div>
+              <div class="value">
+                  <strong>價值定位</strong>
+                  可以提出量化效益
+              </div>
+          </div>
+
+          <div class="maturity-step">
+              <div class="level" style="color: var(--green);">L5</div>
+              <div class="content">
+                  <h4 style="color: var(--green);">跨店複製</h4>
+                  <p>已在多店導入並驗證成效，形成標準化 SOP。</p>
+              </div>
+              <div class="value">
+                  <strong style="color: var(--green);">價值定位</strong>
+                  具備規模化推廣證據
+              </div>
+          </div>
+          
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">11 / 數位工具核心價值</div><div class="section-kicker">Core Value Proposition</div><h2>數位工具導入之三大核心價值</h2>
       <p class="lead">透過自建系統與標準化工具，解決跨店管理最耗時的三大痛點，將人力與時間還給現場服務：</p>
 
       <div class="value-stack">
@@ -691,7 +822,7 @@
     </section>
 
     <section class="page">
-      <div class="page-label">11 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
+      <div class="page-label">12 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
       <p class="lead">我希望這次升遷不只是個人職涯的提升，而是能夠替公司建立長期可運作、可量化、可複製、可持續改善的管理制度。</p>
       <div class="quote">我願意深入現場了解問題，也願意運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。</div>
       <p>如果公司認同這個方向，我願意承擔更大的責任，與各門店店長、總監及公司管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
