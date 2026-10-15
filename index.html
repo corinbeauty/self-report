@@ -9,7 +9,7 @@
 <meta property="og:title" content="賴信吉｜升遷暨職務調整提案" />
 <meta property="og:description" content="以營運改善、資訊系統與教育訓練，建立可量化、可複製、可持續的公司級管理機制。" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="logo.png" />
+<meta property="og:image" content="logo.jpeg" />
 <meta name="description" content="賴信吉｜升遷暨職務調整提案" />
 
 <style>
@@ -280,6 +280,23 @@
       letter-spacing: 0.04em;
   }
   
+  /* 折線圖專用樣式 */
+  .roi-chart-wrapper {
+      background: #fbfcfb;
+      padding: 20px 24px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      margin: 16px 0;
+  }
+  .roi-chart-title {
+      font-size: 11.5pt;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--line);
+  }
+  
   @media(max-width:900px){
     body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3,.vs-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:6vh}.cover-note{grid-template-columns:1fr}
     .cover-header {
@@ -301,6 +318,7 @@
     .roadmap-grid {
         grid-template-columns: 1fr;
     }
+    .roi-chart-wrapper { padding: 16px; }
   }
   @media print{
     @page{size:A4 portrait;margin:0}
@@ -348,7 +366,7 @@
     <section class="page">
       <div class="page-label">01 / 提案摘要</div>
       <div class="section-kicker">Executive Summary</div><h2>從個人能力，升級為公司管理價值</h2>
-      <p class="lead">感謝公司對我的肯定，以及願意給我更大的發展機會。我願意承擔更大責任，並希望將門店管理經驗、程式開發能力及系統架構思維，轉化為能長期協助公司發展的管理價值。</p>
+      <p class="lead">感謝公司對我的肯定，以及願意給我更大的發展機會。針對此次前往其他門店協助改善營運的安排，我願意承擔更大責任，並希望將門店管理經驗、程式開發能力及系統架構思維，轉化為能長期協助公司發展的管理價值。</p>
       <div class="quote">這次職務調整不只是單純升遷，而是整合「營運管理 × 資訊系統 × 教育訓練」三大面向。</div>
       <div class="grid-3">
         <div class="card accent"><div class="num">01</div><h3>現場落地</h3><p>深入北、中、南門店，從第一線作業理解需求與問題，建立符合現場的改善制度。</p></div>
@@ -442,7 +460,68 @@
     </section>
 
     <section class="page">
-      <div class="page-label">07 / 權責與執行</div><div class="section-kicker">Governance &amp; Execution</div><h2>正式調整時，建議一併確認七項事項</h2>
+      <div class="page-label">07 / 成本與效益分析</div><div class="section-kicker">ROI & AI Empowerment</div><h2>AI 賦能下的極致成本控管</h2>
+      <p class="lead">管理一家近 2,000 人規模、22 家門店的企業，若要同時推進「營運數據化、資訊系統化、教育標準化」，傳統作法需要編制完整的專職團隊。但透過 <strong>AI 工具輔助開發</strong> 與 <strong>系統自動化</strong>，我能將 6 人的工作量壓縮至 <strong>1 人統籌</strong>，為公司創造巨大的成本優勢。</p>
+
+      <div class="roi-chart-wrapper">
+          <div class="roi-chart-title">累積管理成本比較：6 人團隊 vs. 1 人 AI 統籌 (年度預估)</div>
+          
+          <!-- SVG 折線圖 -->
+          <div style="position: relative; width: 100%; height: 260px; margin: 25px 0;">
+              <svg viewBox="0 0 600 240" style="width: 100%; height: 100%; overflow: visible; font-family: sans-serif;">
+                  <!-- Y 軸標籤 -->
+                  <text x="35" y="25" fill="#68757a" font-size="11" text-anchor="end">280萬</text>
+                  <text x="35" y="75" fill="#68757a" font-size="11" text-anchor="end">210萬</text>
+                  <text x="35" y="125" fill="#68757a" font-size="11" text-anchor="end">140萬</text>
+                  <text x="35" y="175" fill="#68757a" font-size="11" text-anchor="end">70萬</text>
+                  <text x="35" y="225" fill="#68757a" font-size="11" text-anchor="end">0</text>
+
+                  <!-- 網格線 -->
+                  <line x1="45" y1="20" x2="580" y2="20" stroke="#e9eeeb" stroke-width="1.5" />
+                  <line x1="45" y1="70" x2="580" y2="70" stroke="#e9eeeb" stroke-width="1.5" />
+                  <line x1="45" y1="120" x2="580" y2="120" stroke="#e9eeeb" stroke-width="1.5" />
+                  <line x1="45" y1="170" x2="580" y2="170" stroke="#e9eeeb" stroke-width="1.5" />
+                  <line x1="45" y1="220" x2="580" y2="220" stroke="#d9dfdc" stroke-width="2" />
+
+                  <!-- 傳統模式折線 (紅線) 21.6萬/月 -->
+                  <polyline points="45,220 178,173.7 312,127.4 446,81.1 580,34.8" fill="none" stroke="#d97777" stroke-width="4" stroke-linejoin="round"/>
+                  <circle cx="178" cy="173.7" r="4" fill="#d97777"/>
+                  <circle cx="312" cy="127.4" r="4" fill="#d97777"/>
+                  <circle cx="446" cy="81.1" r="4" fill="#d97777"/>
+                  <circle cx="580" cy="34.8" r="5" fill="#d97777"/>
+                  <text x="580" y="22" fill="#b74444" font-size="12" font-weight="bold" text-anchor="end">❌ 傳統 6 人團隊 (3.6萬 × 6人 = 21.6萬/月)</text>
+
+                  <!-- AI模式折線 (綠線) 2.8萬/月 -->
+                  <polyline points="45,220 178,214 312,208 446,202 580,196" fill="none" stroke="#1f5a4d" stroke-width="4" stroke-linejoin="round"/>
+                  <circle cx="178" cy="214" r="4" fill="#1f5a4d"/>
+                  <circle cx="312" cy="208" r="4" fill="#1f5a4d"/>
+                  <circle cx="446" cy="202" r="4" fill="#1f5a4d"/>
+                  <circle cx="580" cy="196" r="5" fill="#1f5a4d"/>
+                  <text x="580" y="185" fill="#1f5a4d" font-size="12" font-weight="bold" text-anchor="end">✅ 1 人統籌 (本提案新增 2.8萬/月)</text>
+
+                  <!-- X 軸標籤 -->
+                  <text x="45" y="240" fill="#68757a" font-size="11" text-anchor="middle">導入初期</text>
+                  <text x="178" y="240" fill="#68757a" font-size="11" text-anchor="middle">第 3 個月</text>
+                  <text x="312" y="240" fill="#68757a" font-size="11" text-anchor="middle">第 6 個月</text>
+                  <text x="446" y="240" fill="#68757a" font-size="11" text-anchor="middle">第 9 個月</text>
+                  <text x="580" y="240" fill="#68757a" font-size="11" text-anchor="middle">第 12 個月</text>
+              </svg>
+          </div>
+          
+          <!-- ROI 結論 -->
+          <div style="background: #f2f8f5; border-left: 4px solid var(--green); padding: 16px 20px; margin-top: 28px; border-radius: 0 8px 8px 0; font-size: 11pt; color: var(--ink); line-height: 1.7;">
+              <div style="font-size: 12.5pt; font-weight: 800; color: var(--green); margin-bottom: 8px;">💡 投資報酬率（ROI）極大化</div>
+              與傳統擴編 6 人團隊（每月人事費 21.6 萬）相比，本提案透過單一主管的 AI 統籌與系統自動化：<br>
+              <ul style="margin: 8px 0 0 0; padding-left: 1.5em;">
+                  <li style="margin-bottom: 6px;">為公司每月省下：<strong style="color: #b74444; font-size: 13pt;">NT$ 188,000</strong></li>
+                  <li>為公司每年省下高達：<strong style="color: #b74444; font-size: 14pt;">NT$ 2,256,000</strong></li>
+              </ul>
+          </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">08 / 權責與執行</div><div class="section-kicker">Governance &amp; Execution</div><h2>正式調整時，建議一併確認七項事項</h2>
       <div class="checklist">
           <div>
               <div class="checklist-content">
@@ -491,37 +570,35 @@
       <div style="height:18px"></div><h3>建議的管理節奏</h3><div class="grid-3"><div class="card"><b style="color:var(--green)">每週</b><p class="small">問題與需求彙整、進度回報、異常處理。</p></div><div class="card"><b style="color:var(--green)">每月</b><p class="small">營運指標檢視、跨店比較、改善驗收。</p></div><div class="card"><b style="color:var(--green)">每季</b><p class="small">制度盤點、訓練成效與系統優化規劃。</p></div></div>
     </section>
 
-    <!-- 第08頁 系統架構與藍圖 -->
     <section class="page">
-      <div class="page-label">08 / 系統架構與藍圖</div><div class="section-kicker">Architecture &amp; Roadmap</div><h2>企業級雲端基礎設施</h2>
-      <p class="lead">為加速開發時程及 API 調用，系統開發架構後端採用 <strong>Google Cloud (GCP) 企業級雲端基礎設施與 Firebase 開發平台</strong>，免除本地端當機風險及維護不便；並可結合公司既有的 Google Workspace 進行雲端資源與帳號的集中管理。</p>
+      <div class="page-label">09 / 系統架構與藍圖</div><div class="section-kicker">Architecture &amp; Roadmap</div><h2>企業級雲端基礎設施</h2>
+      <p class="lead">為加速開發時程及 API 調用，系統開發架構採用 <strong>Google Cloud (GCP) 企業級雲端運算平台與 Firebase 後端服務</strong>，免除本地端當機風險及在地維護不便性；同時結合公司既有的 <strong>Google Workspace</strong> 進行雲端資源與帳號的集中管理。</p>
       
       <div class="card accent">
         <h3 style="margin-bottom: 14px;">Google Cloud &amp; Firebase 雲端架構</h3>
         <div class="grid-2" style="font-size: 10.5pt; color: #4b4438;">
           <ul style="margin:0; padding-left: 1.25em;">
-            <li style="margin-bottom:8px"><b>公司 Google 管理帳號：</b><br>管理公司擁有的雲端資源。</li>
-            <li style="margin-bottom:8px"><b>Google Cloud 專案與帳務：</b><br>統一管理 API、權限與費用。</li>
-            <li style="margin-bottom:8px"><b>Firebase Authentication：</b><br>建立系統登入與帳號驗證。</li>
-            <li style="margin-bottom:8px"><b>Cloud Firestore：</b><br>儲存系統核心資料庫。</li>
+            <li style="margin-bottom:8px"><b>公司 Google Workspace 管理帳號：</b><br>作為基礎身份，統一管理公司擁有的所有雲端資源權限。</li>
+            <li style="margin-bottom:8px"><b>Google Cloud 專案與帳務：</b><br>集中管理 API 串接、使用權限與維運費用。</li>
+            <li style="margin-bottom:8px"><b>Firebase Authentication：</b><br>建立高安全性的系統登入與帳號驗證機制。</li>
+            <li style="margin-bottom:8px"><b>Cloud Firestore：</b><br>作為系統核心資料庫，安全儲存各項管理資料。</li>
           </ul>
           <ul style="margin:0; padding-left: 1.25em;">
-            <li style="margin-bottom:8px"><b>Firebase Hosting：</b><br>發布網站與前端部署。</li>
-            <li style="margin-bottom:8px"><b>GitHub Repository：</b><br>保存程式碼與修改紀錄。</li>
-            <li style="margin-bottom:8px"><b>IAM、資安規則與備份：</b><br>建立權限、資料安全及復原機制。</li>
-            <li style="margin-bottom:8px"><b>Cloud Logging 與費用警示：</b><br>追蹤錯誤並避免非預期支出。</li>
+            <li style="margin-bottom:8px"><b>Firebase Hosting：</b><br>提供高速穩定的網站發布與前端部署。</li>
+            <li style="margin-bottom:8px"><b>GitHub Repository：</b><br>妥善保存程式碼版本與修改紀錄，確保資產留存。</li>
+            <li style="margin-bottom:8px"><b>IAM、資料庫安全規則與備份：</b><br>建立嚴密的存取權限、資安防護及資料復原機制。</li>
+            <li style="margin-bottom:8px"><b>Cloud Logging 與費用警示：</b><br>即時追蹤系統錯誤，並避免非預期的雲端支出。</li>
           </ul>
         </div>
       </div>
       
       <div style="background: var(--sage); color: var(--green); padding: 14px 20px; border-radius: 8px; margin-top: 16px; font-weight: bold; font-size: 11pt; display: flex; align-items: flex-start; gap: 10px;">
         <span style="font-size: 14pt; line-height: 1.2;">💡</span> 
-        <div>以上雲端架構與資源，初期預估每月維運成本約 <b>NT$ 300 ～ $3,000</b><span style="font-size: 10pt; font-weight: normal; color: var(--green-2);">（將依實際資料儲存與流量而定）</span>。</div>
+        <div>以上企業級雲端架構與資源，初期預估每月維運成本僅約 <b>NT$ 300 ～ $3,000</b><span style="font-size: 10pt; font-weight: normal; color: var(--green-2);">（依實際資料儲存與流量而定）</span>。</div>
       </div>
 
       <div class="rule"></div>
       
-      <!-- 目前已開發程式總覽連結欄位 -->
       <a href="#" class="portfolio-banner" style="margin-top: 0;">
           <div class="icon">💻</div>
           <div class="portfolio-banner-text">
@@ -530,7 +607,6 @@
           </div>
       </a>
 
-      <!-- 預計開發系統區塊 -->
       <div class="roadmap-section">
           <div class="roadmap-title">預計開發系統 Roadmap</div>
           <div class="roadmap-grid">
@@ -554,13 +630,11 @@
       </div>
     </section>
 
-    <!-- 新增：第09頁 數位工具核心價值 -->
     <section class="page">
-      <div class="page-label">09 / 數位工具核心價值</div><div class="section-kicker">Core Value Proposition</div><h2>數位工具導入之三大核心價值</h2>
+      <div class="page-label">10 / 數位工具核心價值</div><div class="section-kicker">Core Value Proposition</div><h2>數位工具導入之三大核心價值</h2>
       <p class="lead">透過自建系統與標準化工具，解決跨店管理最耗時的三大痛點，將人力與時間還給現場服務：</p>
 
       <div class="value-stack">
-        <!-- 核心價值 1 -->
         <div class="card accent">
           <div class="value-card-header">
             <div class="num">01</div>
@@ -578,7 +652,6 @@
           </div>
         </div>
 
-        <!-- 核心價值 2 -->
         <div class="card accent">
           <div class="value-card-header">
             <div class="num">02</div>
@@ -596,7 +669,6 @@
           </div>
         </div>
 
-        <!-- 核心價值 3 -->
         <div class="card accent">
           <div class="value-card-header">
             <div class="num">03</div>
@@ -618,9 +690,8 @@
       <div class="quote" style="margin-top: 22px;">把繁瑣留給系統，把精準留給數據，把時間還給現場服務。</div>
     </section>
 
-    <!-- 結語順延為第10頁 -->
     <section class="page">
-      <div class="page-label">10 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
+      <div class="page-label">11 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
       <p class="lead">我希望這次升遷不只是個人職涯的提升，而是能夠替公司建立長期可運作、可量化、可複製、可持續改善的管理制度。</p>
       <div class="quote">我願意深入現場了解問題，也願意運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。</div>
       <p>如果公司認同這個方向，我願意承擔更大的責任，與各門店店長、總監及公司管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
