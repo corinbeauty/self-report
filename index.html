@@ -33,16 +33,15 @@
   .cover::before{content:"";position:absolute;width:190mm;height:190mm;border-radius:50%;right:-105mm;top:-50mm;background:rgba(31,90,77,.08)}
   .cover::after{content:"不老松｜升遷暨職務調整提案";border-top:0;color:rgba(36,50,56,.58)}
   
-  /* 封面頂部佈局 (Logo與報告人並排) */
+  /* 封面頂部佈局 */
   .cover-header {
       display: flex;
       justify-content: space-between;
-      align-items: center; /* 垂直置中對齊 */
+      align-items: center; 
       position: relative;
       z-index: 5;
   }
   .brand{display:flex;align-items:center;}
-  .logo-img{height:80px;width:auto;object-fit:contain;mix-blend-mode:multiply;}
   .reporter-info {
       text-align: right;
       font-size: 10pt;
@@ -116,12 +115,12 @@
   }
   
   .text-red { color: var(--red); font-weight: bold; }
+  .text-highlight { color: #b74444; font-weight: bold; }
 
   .page-label{position:absolute;right:18mm;top:12mm;color:#9aa49f;font-size:9pt}
   .toc{display:grid;gap:0;margin-top:18px}.toc div{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.toc b{color:var(--green);min-width:28px}
   .small{font-size:10pt;color:var(--muted)}
 
-  /* 開發程式總覽連結橫幅樣式 */
   .portfolio-banner {
       display: flex;
       align-items: center;
@@ -161,221 +160,42 @@
       font-size: 16pt;
       flex-shrink: 0;
   }
-  .portfolio-banner-text {
-      flex: 1;
-  }
-  .portfolio-banner-text strong {
-      display: block;
-      font-size: 13pt;
-      color: var(--green);
-      margin-bottom: 3px;
-      letter-spacing: 0.03em;
-  }
-  .portfolio-banner-text small {
-      color: var(--muted);
-      font-size: 10pt;
-      display: block;
-  }
+  .portfolio-banner-text { flex: 1; }
+  .portfolio-banner-text strong { display: block; font-size: 13pt; color: var(--green); margin-bottom: 3px; letter-spacing: 0.03em; }
+  .portfolio-banner-text small { color: var(--muted); font-size: 10pt; display: block; }
 
-  /* 預計開發系統區塊樣式 */
-  .roadmap-section {
-      margin-top: 20px;
-      border-top: 1px dashed var(--line);
-      padding-top: 18px;
-  }
-  .roadmap-title {
-      font-size: 11pt;
-      color: var(--muted);
-      font-weight: bold;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-  }
-  .roadmap-title::before {
-      content: "⚙️";
-  }
-  .roadmap-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-  }
-  .roadmap-card {
-      background: var(--cream);
-      border: 1px solid rgba(186,139,74,.3);
-      padding: 12px 14px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-  }
-  .roadmap-card .bullet {
-      width: 8px;
-      height: 8px;
-      background: var(--gold);
-      border-radius: 50%;
-      flex-shrink: 0;
-  }
-  .roadmap-card span {
-      font-size: 11pt;
-      font-weight: bold;
-      color: #4b4438;
-  }
-
-  /* L1-L5 成熟度指標專用樣式 */
-  .maturity-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-top: 24px;
-  }
-  .maturity-step {
-      display: flex;
-      gap: 16px;
-      background: #fbfcfb;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 16px 20px;
-      align-items: center;
-      position: relative;
-      transition: all 0.2s;
-  }
-  .maturity-step:hover {
-      border-color: var(--green);
-      background: var(--white);
-      box-shadow: 0 4px 12px rgba(31,90,77,.08);
-  }
-  .maturity-step .level {
-      font-size: 18pt;
-      font-weight: 900;
-      color: var(--gold);
-      min-width: 48px;
-      text-align: center;
-  }
-  .maturity-step .content {
-      flex: 1;
-  }
-  .maturity-step .content h4 {
-      margin: 0 0 4px 0;
-      font-size: 12.5pt;
-      color: var(--green);
-  }
-  .maturity-step .content p {
-      margin: 0;
-      font-size: 10pt;
-      color: var(--muted);
-  }
-  .maturity-step .value {
-      text-align: right;
-      color: var(--ink);
-      font-size: 10.5pt;
-      padding-left: 16px;
-      border-left: 1px dashed var(--line);
-      min-width: 140px;
-  }
-  .maturity-step .value strong {
-      display: block;
-      color: var(--green);
-      font-size: 11pt;
-      margin-bottom: 2px;
-  }
-
-  /* 三大核心價值卡片樣式 */
-  .value-stack {
-      display: grid;
-      gap: 16px;
-      margin-top: 18px;
-  }
-  .value-card-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-  }
-  .value-card-header .num {
-      margin-bottom: 0;
-      flex-shrink: 0;
-  }
-  .value-card-header h3 {
-      margin: 0;
-      font-size: 14.5pt;
-  }
-  .vs-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-  }
-  .pain-box {
-      background: #fdf6f6;
-      border-left: 3.5px solid #d97777;
-      padding: 12px 14px;
-      border-radius: 0 8px 8px 0;
-      font-size: 10.5pt;
-      color: #5a4242;
-      line-height: 1.65;
-  }
-  .pain-box strong {
-      display: block;
-      color: #b74444;
-      font-size: 10pt;
-      margin-bottom: 4px;
-      letter-spacing: 0.04em;
-  }
-  .gain-box {
-      background: #f2f8f5;
-      border-left: 3.5px solid var(--green);
-      padding: 12px 14px;
-      border-radius: 0 8px 8px 0;
-      font-size: 10.5pt;
-      color: var(--ink);
-      line-height: 1.65;
-  }
-  .gain-box strong {
-      display: block;
-      color: var(--green);
-      font-size: 10pt;
-      margin-bottom: 4px;
-      letter-spacing: 0.04em;
-  }
+  .roadmap-section { margin-top: 20px; border-top: 1px dashed var(--line); padding-top: 18px; }
+  .roadmap-title { font-size: 11pt; color: var(--muted); font-weight: bold; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .roadmap-title::before { content: "🎯"; }
   
-  /* 折線圖專用樣式 */
-  .roi-chart-wrapper {
-      background: #fbfcfb;
-      padding: 20px 24px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      margin: 16px 0;
-  }
-  .roi-chart-title {
-      font-size: 11.5pt;
-      font-weight: 800;
-      color: var(--ink);
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 1px dashed var(--line);
-  }
+  .value-stack { display: grid; gap: 16px; margin-top: 18px; }
+  .value-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .value-card-header .num { margin-bottom: 0; flex-shrink: 0; }
+  .value-card-header h3 { margin: 0; font-size: 14.5pt; }
+  .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pain-box { background: #fdf6f6; border-left: 3.5px solid #d97777; padding: 12px 14px; border-radius: 0 8px 8px 0; font-size: 10.5pt; color: #5a4242; line-height: 1.65; }
+  .pain-box strong { display: block; color: #b74444; font-size: 10pt; margin-bottom: 4px; letter-spacing: 0.04em; }
+  .gain-box { background: #f2f8f5; border-left: 3.5px solid var(--green); padding: 12px 14px; border-radius: 0 8px 8px 0; font-size: 10.5pt; color: var(--ink); line-height: 1.65; }
+  .gain-box strong { display: block; color: var(--green); font-size: 10pt; margin-bottom: 4px; letter-spacing: 0.04em; }
+  
+  .roi-chart-wrapper { background: #fbfcfb; padding: 20px 24px; border-radius: 12px; border: 1px solid var(--line); margin: 16px 0; }
+  .roi-chart-title { font-size: 11.5pt; font-weight: 800; color: var(--ink); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
+  
+  .maturity-timeline { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+  .maturity-step { display: flex; gap: 16px; background: #fbfcfb; border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; align-items: center; position: relative; transition: all 0.2s; }
+  .maturity-step:hover { border-color: var(--green); background: var(--white); box-shadow: 0 4px 12px rgba(31,90,77,.08); }
+  .maturity-step .level { font-size: 18pt; font-weight: 900; color: var(--gold); min-width: 48px; text-align: center; }
+  .maturity-step .content { flex: 1; }
+  .maturity-step .content h4 { margin: 0 0 4px 0; font-size: 12.5pt; color: var(--green); }
+  .maturity-step .content p { margin: 0; font-size: 10pt; color: var(--muted); }
+  .maturity-step .value { text-align: right; color: var(--ink); font-size: 10.5pt; padding-left: 16px; border-left: 1px dashed var(--line); min-width: 140px; }
+  .maturity-step .value strong { display: block; color: var(--green); font-size: 11pt; margin-bottom: 2px; }
   
   @media(max-width:900px){
     body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3,.vs-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:6vh}.cover-note{grid-template-columns:1fr}
-    .cover-header {
-        align-items: center;
-        margin-bottom: 24px;
-        padding-bottom: 16px;
-        border-bottom: 1px solid var(--line);
-    }
-    .logo-img{height:50px;}
-    .reporter-info {
-        font-size: 9pt;
-    }
-    .portfolio-banner {
-        padding: 14px 16px;
-    }
-    .portfolio-banner::after {
-        right: 16px;
-    }
-    .roadmap-grid {
-        grid-template-columns: 1fr;
-    }
+    .cover-header { align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+    .portfolio-banner { padding: 14px 16px; }
+    .portfolio-banner::after { right: 16px; }
     .roi-chart-wrapper { padding: 16px; }
     .maturity-step { flex-direction: column; text-align: center; gap: 10px; }
     .maturity-step .value { text-align: center; padding-left: 0; border-left: none; border-top: 1px dashed var(--line); padding-top: 10px; min-width: auto; width: 100%; }
@@ -384,18 +204,8 @@
     @page{size:A4 portrait;margin:0}
     body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
     .toolbar{display:none}.report{margin:0;max-width:none}.page{margin:0;box-shadow:none;width:210mm;height:297mm;min-height:297mm;padding:18mm 18mm 16mm}.page::after{content:"不老松｜升遷暨職務調整提案"}
-    .portfolio-banner {
-        border-color: var(--line);
-    }
-    .portfolio-banner:hover {
-        transform: none;
-        box-shadow: none;
-        background: var(--white);
-    }
-    .roadmap-card {
-        border-color: #d9dfdc;
-        background: #fbfcfb;
-    }
+    .portfolio-banner { border-color: var(--line); }
+    .portfolio-banner:hover { transform: none; box-shadow: none; background: var(--white); }
   }
 </style>
 </head>
@@ -406,7 +216,7 @@
       
       <div class="cover-header">
           <div class="brand">
-              <img src="logo.png" alt="不老松足湯養身行館" class="logo-img">
+              <img src="logo.png" alt="不老松足湯養身行館" style="height: 48px; object-fit: contain; mix-blend-mode: multiply; border-radius: 50%; box-shadow: 0 8px 18px rgba(31,90,77,.24); background: white;">
           </div>
           <div class="reporter-info">
               報告人：賴信吉<br>
@@ -425,26 +235,26 @@
 
     <section class="page">
       <div class="page-label">01 / 提案摘要</div>
-      <div class="section-kicker">Executive Summary</div><h2>從個人能力，升級為公司管理價值</h2>
-      <p class="lead">感謝公司對我的肯定，以及願意給我更大的發展機會。針對此次前往其他門店協助改善營運的安排，我願意承擔更大責任，並希望將門店管理經驗、程式開發能力及系統架構思維，轉化為能長期協助公司發展的管理價值。</p>
-      <div class="quote">這次職務調整不只是單純升遷，而是整合「營運管理 × 資訊系統 × 教育訓練」三大面向。</div>
+      <div class="section-kicker">Executive Summary</div><h2>從單點支援，升級為全公司營運效能引擎</h2>
+      <p class="lead">感謝公司給予前往各門店協助營運改善的機會。本提案旨在將此次實務經驗轉化為長期的公司資產，整合「營運管理 × 資訊系統 × 教育訓練」三大面向，透過導入數位工具與標準化流程，為全台 22 家門店建立可量化、可複製的管理機制，進而<span class="text-red">降低隱形溝通成本、取代繁瑣人工並規避營運風險。</span></p>
+      <div class="quote">這次職務調整不僅是個人職責的擴展，更是讓公司以更具效益的成本，獲得一整套完整的數位與營運管理解方。</div>
       <div class="grid-3">
         <div class="card accent"><div class="num">01</div><h3>現場落地</h3><p>深入北、中、南門店，從第一線作業理解需求與問題，建立符合現場的改善制度。</p></div>
         <div class="card accent"><div class="num">02</div><h3>數據追蹤</h3><p>統一指標與回報方式，以營運數據、執行率及品質指標追蹤改善成果。</p></div>
         <div class="card accent"><div class="num">03</div><h3>持續複製</h3><p>把個人經驗轉化為制度、教材及系統功能，讓成功做法可跨店推廣。</p></div>
       </div>
       <div class="rule"></div><h3>提案核心成果</h3>
-      <div class="toc"><div><b>A</b><span>建立跨店營運改善與問題追蹤機制</span></div><div><b>B</b><span>統籌全台 22 家門店資訊系統規劃、開發與維護</span></div><div><b>C</b><span>建置新人、主管與晉升培訓的標準化制度</span></div><div><b>D</b><span>形成「發現問題 → 分析原因 → 改善 → 驗收」的管理循環</span></div></div>
+      <div class="toc"><div><b>A</b><span>建立跨店營運改善與問題追蹤機制，減少管理盲區。</span></div><div><b>B</b><span>統籌全台 22 家門店資訊系統開發，省下外部發包高昂費用。</span></div><div><b>C</b><span>建置新人與晉升培訓的數位化制度，縮短上手時間。</span></div><div><b>D</b><span>形成「發現問題 → 分析原因 → 改善 → 驗收」的管理循環。</span></div></div>
     </section>
 
     <section class="page">
-      <div class="page-label">02 / 職務定位</div><div class="section-kicker">Role Definition</div><h2>三大職責，對應公司級管理任務</h2>
-      <div class="card accent"><div class="num">01</div><h3>營運管理與跨店改善</h3><p>協助處理問題門店的營運、人員管理、服務品質及工作流程；與店長、總監及督導共同分析問題、制定改善方案並追蹤執行成果。</p><div><span class="pill">現場觀察</span><span class="pill">流程改善</span><span class="pill">跨店複製</span></div></div>
+      <div class="page-label">02 / 職務定位</div><div class="section-kicker">Role Definition</div><h2>三大職責，直擊痛點創造價值</h2>
+      <div class="card accent"><div class="num">01</div><h3>營運管理與跨店改善</h3><p>協助處理問題門店的營運、人員管理、服務品質及工作流程；與店長、總監及督導共同分析問題、制定改善方案並追蹤執行成果，<span class="text-highlight">有效規避管理盲點與營運風險。</span></p><div><span class="pill">降低風險</span><span class="pill">流程改善</span><span class="pill">跨店複製</span></div></div>
       <div style="height:12px"></div>
-      <div class="card accent"><div class="num">02</div><h3>資訊系統規劃、開發與維護</h3><p>負責全台 22 家門店的內部資訊系統規劃、架構設計、程式開發、功能優化及持續維護，逐步建立整合性、標準化且可複製的數位管理系統。</p><div><span class="pill">系統架構</span><span class="pill">需求管理</span><span class="pill">數位管理</span></div></div>
+      <div class="card accent"><div class="num">02</div><h3>資訊系統規劃、開發與維護</h3><p>負責全台 22 家門店的內部資訊系統規劃、架構設計、程式開發、功能優化及持續維護，逐步建立整合性、標準化的數位管理系統，<span class="text-highlight">大幅取代繁瑣的人工文書作業，降低人為錯誤率。</span></p><div><span class="pill">防呆防錯</span><span class="pill">需求管理</span><span class="pill">自動化</span></div></div>
       <div style="height:12px"></div>
-      <div class="card accent"><div class="num">03</div><h3>教育訓練與人才培育</h3><p>建立新人訓練、主管培訓、晉升評核及標準作業流程；結合數位工具，留下訓練紀錄、執行進度、考核結果與追蹤機制。</p><div><span class="pill">教材制度</span><span class="pill">主管培訓</span><span class="pill">晉升評核</span></div></div>
-      <div class="highlight"><h3>職務價值主張</h3><p>讓資訊系統不只是輔助工具，而是連結現場營運、人才培育與管理決策的重要基礎。</p></div>
+      <div class="card accent"><div class="num">03</div><h3>教育訓練與人才培育</h3><p>建立新人訓練、主管培訓、晉升評核及標準作業流程；結合數位工具，留下訓練紀錄與追蹤機制，<span class="text-highlight">縮短新人上手時間，有效提升員工留任率與服務一致性。</span></p><div><span class="pill">縮短陣痛期</span><span class="pill">主管培訓</span><span class="pill">留任率提升</span></div></div>
+      <div class="highlight"><h3>職務價值主張</h3><p>讓資訊系統不只是輔助工具，而是連結現場營運、人才培育與管理決策，為公司省時、省錢並產生數據紅利的重要基礎。</p></div>
     </section>
 
     <section class="page">
@@ -467,36 +277,36 @@
         <div class="card"><h3>服務品質</h3><div class="metric"><span>客訴件數</span><b>顧客評價</b></div><div class="metric"><span>回訪狀況</span><b>改善完成率</b></div></div>
         <div class="card"><h3>工作效率與系統</h3><div class="metric"><span>處理時間</span><b>流程完成率</b></div><div class="metric"><span>錯誤／異常件數</span><b>資料填報完整率</b></div></div>
       </div>
-      <div class="rule"></div><h3>五步驟管理循環</h3>
+      <div class="rule"></div><h3>五步驟 PDCA 數據循環</h3>
       <div class="checklist">
           <div>
               <div class="checklist-content">
-                  <span>建立數據標準</span>
-                  <small class="small">統一指標定義、資料格式與回報方式。</small>
+                  <span>建立數據標準 (Plan)</span>
+                  <small class="small">統一指標定義、資料格式與回報方式，解決各店標準不一的問題。</small>
               </div>
           </div>
           <div>
                <div class="checklist-content">
-                  <span>建立量化目標</span>
+                  <span>建立量化目標 (Plan)</span>
                   <small class="small">依工作性質設定目標值、期限與負責人。</small>
               </div>
           </div>
           <div>
                <div class="checklist-content">
-                  <span>建立追蹤機制</span>
-                  <small class="small">記錄執行進度、異常狀況與改善結果。</small>
+                  <span>建立追蹤機制 (Do)</span>
+                  <small class="small">透過數位系統記錄執行進度、異常狀況，確保執行不中斷。</small>
               </div>
           </div>
           <div>
                <div class="checklist-content">
-                  <span>建立數據分析</span>
-                  <small class="small">比較門店表現與改善前後差異，找出原因及成功做法。</small>
+                  <span>建立數據分析 (Check)</span>
+                  <small class="small">比較門店表現與改善前後差異，找出核心原因及可複製的做法。</small>
               </div>
           </div>
           <div>
                <div class="checklist-content">
-                  <span>建立持續改善</span>
-                  <small class="small">將分析結果回饋至現場、訓練與系統功能優化。</small>
+                  <span>建立持續改善 (Act)</span>
+                  <small class="small">將分析結果回饋至現場、更新教材與優化系統防呆機制。</small>
               </div>
           </div>
       </div>
@@ -511,20 +321,28 @@
     </section>
 
     <section class="page">
-      <div class="page-label">06 / 職稱與薪資</div><div class="section-kicker">Position &amp; Compensation</div><h2>職責、權限與回報機制應相互對應</h2>
+      <div class="page-label">06 / 職稱與薪資</div><div class="section-kicker">Position &amp; Compensation</div><h2>職責、權限與整體投資回報</h2>
       <div class="card accent"><h3>建議正式職稱</h3><p style="font-size:20pt;color:var(--green);font-weight:800;margin:5px 0">營運改善暨資訊系統主管</p><p>正式承接全公司資訊系統管理及教育訓練相關職責。</p></div>
       <div style="height:14px"></div><div class="card"><h3>職務延伸討論</h3><p>若公司希望由我統籌全公司的資訊策略、系統架構及數位化發展，亦希望進一步討論「資訊長（CIO）」及「教育訓練主管」的職務定位與權責。</p></div>
-      <div class="highlight"><h3>薪資期望</h3><div class="big">每月增加 NT$28,000</div><p>此金額係針對新增職務的整體責任提出，並非僅針對單一系統或單次專案的開發費用。</p></div>
-      <h3>新增責任涵蓋</h3><div class="grid-2"><ul><li>跨店營運改善</li><li>全台 22 家門店資訊系統規劃</li><li>程式開發與持續維護</li></ul><ul><li>數據管理機制</li><li>教育訓練制度建置</li><li>數位化推動與管理整合</li></ul></div>
-      <div class="quote">期望薪資、職稱、工作責任與管理權限能夠相互對應，讓我以正式職務定位與合理資源配置，長期承擔公司級管理任務。</div>
+      
+      <div class="highlight" style="margin-top: 24px;">
+          <h3>薪資期望</h3>
+          <div class="big">每月增加 NT$28,000</div>
+          <p style="margin-top: 10px; line-height: 1.6;">
+              此金額並非單一系統的專案報價，而是反映「一人統籌跨部門職能」的整體價值。我將同時承擔 <strong>全台 22 家門店 IT 系統建置、營運問題督導與教育訓練推動</strong>，大幅取代傳統需配置多人的團隊編制，為公司創造極高的人事投資報酬率（ROI）。
+          </p>
+      </div>
+      
+      <h3>職責範圍涵蓋</h3><div class="grid-2"><ul><li>跨店營運改善</li><li>全台 22 家門店資訊系統規劃</li><li>程式開發與持續維護</li></ul><ul><li>數據管理機制</li><li>教育訓練制度建置</li><li>數位化推動與管理整合</li></ul></div>
+      <div class="quote">期望薪資、職稱、工作責任與管理權限能夠相互對應，讓我以正式職務定位與合理資源配置，長期為公司扛起這份整體營運與數位轉型的責任。</div>
     </section>
 
     <section class="page">
       <div class="page-label">07 / 成本與效益分析</div><div class="section-kicker">ROI & AI Empowerment</div><h2>AI 賦能下的極致成本控管</h2>
-      <p class="lead">管理一家近 2,000 人規模、22 家門店的企業，若要同時推進「營運數據化、資訊系統化、教育標準化」，傳統作法需要編制完整的專職團隊。但透過 <strong>AI 工具輔助開發</strong> 與 <strong>系統自動化</strong>，我能將 6 人的工作量壓縮至 <strong>1 人統籌</strong>，為公司創造巨大的成本優勢。</p>
+      <p class="lead">管理一家近 2,000 人規模、22 家門店的企業，若要同時推進「營運數據化、資訊系統化、教育標準化」，傳統作法需要編制完整的團隊。但透過 <strong>AI 工具輔助開發</strong> 與 <strong>系統自動化</strong>，我能將 6 人的工作量壓縮至 <strong>1 人統籌</strong>，為公司創造巨大的成本優勢。</p>
 
       <div class="roi-chart-wrapper">
-          <div class="roi-chart-title">管理成本差異：6 人團隊 vs. 1 人統籌 (預估)</div>
+          <div class="roi-chart-title">管理成本差異：6 人團隊 vs. 1 人統籌 <span style="background-color: yellow; color: red; padding: 2px 6px; border-radius: 4px; font-weight: bold; margin-left: 4px; font-size: 10pt;">(預估)</span></div>
           
           <!-- SVG 折線圖 -->
           <div style="position: relative; width: 100%; height: 260px; margin: 25px 0;">
@@ -631,15 +449,15 @@
     </section>
 
     <section class="page">
-      <div class="page-label">09 / 系統架構與藍圖</div><div class="section-kicker">Architecture &amp; Roadmap</div><h2>企業級雲端基礎設施</h2>
-      <p class="lead">為加速開發時程及 API 調用，系統開發架構採用 <strong>Google Cloud (GCP) 企業級雲端運算平台與 Firebase 後端服務</strong>，免除本地端當機風險及在地維護不便性；同時結合公司既有的 <strong>Google Workspace</strong> 進行雲端資源與帳號的集中管理。</p>
+      <div class="page-label">09 / 系統架構與藍圖</div><div class="section-kicker">Architecture &amp; Roadmap</div><h2>企業級雲端基礎設施與排程治理</h2>
+      <p class="lead">為加速開發時程及 API 調用，系統開發底層採用 <strong>Google Cloud (GCP) 企業級雲端運算平台與 Firebase 後端服務</strong>，免除本地端當機風險；同時結合公司既有的 <strong>Google Workspace</strong> 進行雲端資源的管理與控管。</p>
       
       <div class="card accent">
-        <h3 style="margin-bottom: 14px;">Google Cloud &amp; Firebase 雲端架構</h3>
+        <h3 style="margin-bottom: 14px;">安全穩定的後端運算與權限架構</h3>
         <div class="grid-2" style="font-size: 10.5pt; color: #4b4438;">
           <ul style="margin:0; padding-left: 1.25em;">
-            <li style="margin-bottom:8px"><b>公司 Google Workspace 管理帳號：</b><br>作為基礎身份，統一管理公司擁有的所有雲端資源權限。</li>
-            <li style="margin-bottom:8px"><b>Google Cloud 專案與帳務：</b><br>集中管理 API 串接、使用權限與維運費用。</li>
+            <li style="margin-bottom:8px"><b>公司 Google Workspace 管理帳號：</b><br>作為基礎身份，統一管理公司雲端資源。</li>
+            <li style="margin-bottom:8px"><b>Google Cloud 專案與帳務：</b><br>集中管理後端運算 API、權限與費用。</li>
             <li style="margin-bottom:8px"><b>Firebase Authentication：</b><br>建立高安全性的系統登入與帳號驗證機制。</li>
             <li style="margin-bottom:8px"><b>Cloud Firestore：</b><br>作為系統核心資料庫，安全儲存各項管理資料。</li>
           </ul>
@@ -652,45 +470,35 @@
         </div>
       </div>
       
-      <div style="background: var(--sage); color: var(--green); padding: 14px 20px; border-radius: 8px; margin-top: 16px; font-weight: bold; font-size: 11pt; display: flex; align-items: flex-start; gap: 10px;">
+      <div style="background: var(--sage); color: var(--green); padding: 14px 20px; border-radius: 8px; margin-top: 16px; margin-bottom: 24px; font-weight: bold; font-size: 11pt; display: flex; align-items: flex-start; gap: 10px;">
         <span style="font-size: 14pt; line-height: 1.2;">💡</span> 
-        <div>以上企業級雲端架構與資源，初期預估每月維運成本僅約 <b>NT$ 300 ～ $3,000</b><span style="font-size: 10pt; font-weight: normal; color: var(--green-2);">（依實際資料儲存與流量而定）</span>。</div>
+        <div>以上企業級後端架構與資源，初期預估每月維運成本僅約 <b>NT$ 300 ～ $3,000</b><span style="font-size: 10pt; font-weight: normal; color: var(--green-2);">（依實際資料儲存與流量而定）</span>。</div>
       </div>
 
-      <div class="rule"></div>
-      
-      <a href="#" class="portfolio-banner" style="margin-top: 0;">
-          <div class="icon">💻</div>
-          <div class="portfolio-banner-text">
-              <strong>目前已開發程式總覽</strong>
-              <small>點擊查看現有系統開發成果（連結後續更新）</small>
-          </div>
-      </a>
-
       <div class="roadmap-section">
-          <div class="roadmap-title">預計開發系統 Roadmap</div>
-          <div class="roadmap-grid">
-              <div class="roadmap-card">
-                  <div class="bullet"></div>
-                  <span>財務對帳系統</span>
+          <div class="roadmap-title">系統開發需求與排程管理機制</div>
+          <p style="font-size: 10.5pt; color: var(--muted); margin-bottom: 14px;">為了確保開發資源精準解決最高價值的營運痛點，將建置標準化的「系統需求管理機制」，所有系統功能的開發與上線，皆依循以下專業化治理流程：</p>
+          <div class="grid-2" style="gap: 14px;">
+              <div class="card" style="background: #fbfcfb; border-color: var(--line); padding: 14px;">
+                  <strong style="color: var(--green); display: block; margin-bottom: 6px; font-size: 11pt;">1. 統一需求提報 (Request)</strong>
+                  <small style="color: var(--muted); line-height: 1.6;">建置「系統開發需求提報模組」，匯集全台門店的營運痛點與系統擴充需求，取代過去零散且難以追蹤的口頭或通訊軟體交辦。</small>
               </div>
-              <div class="roadmap-card">
-                  <div class="bullet"></div>
-                  <span>人才管理資料庫</span>
+              <div class="card" style="background: #fbfcfb; border-color: var(--line); padding: 14px;">
+                  <strong style="color: var(--green); display: block; margin-bottom: 6px; font-size: 11pt;">2. 總部集中評估 (Evaluation)</strong>
+                  <small style="color: var(--muted); line-height: 1.6;">針對提報項目，由總部進行商業價值（ROI）、營運急迫性與系統相容性評估，確保 IT 開發資源精準投入於高價值項目。</small>
               </div>
-              <div class="roadmap-card">
-                  <div class="bullet"></div>
-                  <span>人力黑名單系統</span>
+              <div class="card" style="background: #fbfcfb; border-color: var(--line); padding: 14px;">
+                  <strong style="color: var(--green); display: block; margin-bottom: 6px; font-size: 11pt;">3. 動態優先排程 (Prioritization)</strong>
+                  <small style="color: var(--muted); line-height: 1.6;">依據總部評估結果確立「開發優先級」，摒棄容易落後的僵化長程計畫，以敏捷式管理進行動態的滾動式開發排程。</small>
               </div>
-              <div class="roadmap-card">
-                  <div class="bullet"></div>
-                  <span>維修報修系統</span>
+              <div class="card" style="background: #fbfcfb; border-color: var(--line); padding: 14px;">
+                  <strong style="color: var(--green); display: block; margin-bottom: 6px; font-size: 11pt;">4. 迭代交付上線 (Agile Delivery)</strong>
+                  <small style="color: var(--muted); line-height: 1.6;">依序進行程式開發、跨店測試與驗收上線，形成「需求→評估→排程→交付」的標準化且具高度彈性的系統治理循環。</small>
               </div>
           </div>
       </div>
     </section>
 
-    <!-- 新增：第 10 頁 系統落地的成熟度指標 -->
     <section class="page">
       <div class="page-label">10 / 系統導入與驗證指標</div><div class="section-kicker">Lifecycle &amp; Maturity</div>
       <h2>系統落地的五階段成熟度指標</h2>
@@ -828,7 +636,15 @@
       <p>如果公司認同這個方向，我願意承擔更大的責任，與各門店店長、總監及公司管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
       <div class="rule"></div><div class="grid-3"><div class="card accent"><h3>可落地</h3><p>從現場出發，制度與系統真正符合工作流程。</p></div><div class="card accent"><h3>可衡量</h3><p>以數據追蹤進度，讓成果清楚可見。</p></div><div class="card accent"><h3>可持續</h3><p>透過訓練、系統與治理，形成長期能力。</p></div></div>
       
-      <div style="margin-top:42px; border-top: 1px solid var(--line); padding-top: 24px;">
+      <a href="#" class="portfolio-banner">
+          <div class="icon">💻</div>
+          <div class="portfolio-banner-text">
+              <strong>目前已開發程式總覽</strong>
+              <small>點擊查看現有系統開發成果（連結後續更新）</small>
+          </div>
+      </a>
+
+      <div style="margin-top:32px; border-top: 1px solid var(--line); padding-top: 24px;">
           <h3 style="font-size: 11pt; color: var(--muted); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
               <span>⚖️</span> 系統開發及維護責任條款（雙方權益草案）
           </h3>
