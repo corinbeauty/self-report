@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>不老松｜營運數位化整合方案</title>
+
+<!-- 給 LINE、Facebook 等社群軟體讀取的預覽標籤 -->
+<meta property="og:title" content="營運數位化整合方案：為 22 家門店建立管理機制" />
+<meta property="og:description" content="以 AI 與標準化流程，建立可量化、可複製、可持續的公司級管理機制。附：職務定位與薪資調整建議。" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="logo.png" />
+<meta name="description" content="營運數位化整合方案" />
+
+<style>
+  :root{
+    --ink:#243238; --muted:#68757a; --green:#1f5a4d; --green-2:#2f7765;
+    --sage:#dfece5; --gold:#ba8b4a; --cream:#f6f3ec; --line:#d9dfdc;
+    --white:#fff; --shadow:0 18px 42px rgba(32,55,49,.12);
+    --red:#d32f2f;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#e9eeeb;color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.75}
+  .toolbar{position:sticky;top:0;z-index:10;background:rgba(246,248,246,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .toolbar small{color:var(--muted)}
+  .toolbar button{border:0;background:var(--green);color:white;border-radius:999px;padding:9px 17px;font-weight:700;cursor:pointer}
+  .report{max-width:900px;margin:28px auto 60px}
+  .page{width:210mm;min-height:297mm;background:var(--white);margin:0 auto 24px;padding:18mm 18mm 16mm;position:relative;overflow:hidden;box-shadow:var(--shadow);page-break-after:always}
+  .page:last-child{page-break-after:auto}
+  .page::after{content:"不老松｜營運數位化整合方案";position:absolute;bottom:8mm;left:18mm;right:18mm;border-top:1px solid var(--line);padding-top:4mm;color:#89958f;font-size:9pt;letter-spacing:.05em}
+  .cover{background:linear-gradient(145deg,#fbfcfa 0%,#edf5f0 56%,#dcebe3 100%);display:flex;flex-direction:column;justify-content:space-between}
+  .cover::before{content:"";position:absolute;width:190mm;height:190mm;border-radius:50%;right:-105mm;top:-50mm;background:rgba(31,90,77,.08)}
+  .cover::after{content:"不老松｜營運數位化整合方案";border-top:0;color:rgba(36,50,56,.58)}
+  
+  /* 封面頂部佈局 */
+  .cover-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      position: relative;
+      z-index: 5;
+  }
+  .brand{display:flex;align-items:center;}
+  .logo-img{height:80px;width:auto;object-fit:contain;mix-blend-mode:multiply;}
+  .reporter-info {
+      text-align: right;
+      font-size: 10pt;
+      color: var(--muted);
+      line-height: 1.5;
+  }
+  
+  .cover-main{position:relative;margin-top:12mm}
+  .eyebrow{color:var(--gold);font-size:11pt;font-weight:800;letter-spacing:.2em;margin-bottom:10px}
+  h1{font-size:30pt;line-height:1.25;letter-spacing:.04em;margin:0 0 14px;color:var(--green)}
+  .cover-sub{font-size:16pt;color:var(--ink);max-width:145mm;line-height:1.7}
+  .cover-line{width:55mm;height:4px;background:var(--gold);margin:24px 0}
+  .cover-note{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px;border-top:1px solid rgba(31,90,77,.25);padding-top:14px;color:var(--muted);font-size:10.5pt}
+  .section-kicker{font-size:10pt;color:var(--gold);font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:4px}
+  h2{font-size:23pt;color:var(--green);line-height:1.3;margin:0 0 14px;letter-spacing:.04em}
+  h3{font-size:14pt;color:var(--green);margin:0 0 7px}
+  p{margin:0 0 12px}
+  .lead{font-size:13pt;line-height:1.9;color:#435257}
+  .rule{height:1px;background:var(--line);margin:20px 0}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:15px;background:#fbfcfb}
+  .card.accent{border-top:4px solid var(--green);background:linear-gradient(180deg,#f4f9f6,#fff)}
+  .num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--sage);color:var(--green);font-weight:800;margin-bottom:9px}
+  .pill{display:inline-block;background:var(--sage);color:var(--green);font-weight:700;padding:3px 10px;border-radius:999px;font-size:9.5pt;margin:0 5px 6px 0}
+  ul{padding-left:1.25em;margin:8px 0 0} li{margin:5px 0}
+  .quote{border-left:4px solid var(--gold);padding:10px 16px;background:var(--cream);font-size:13pt;font-weight:700;color:#4b4438;margin:18px 0}
+  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+  .flow .stage{position:relative;padding:15px 13px;border-radius:12px;background:var(--green);color:#fff;min-height:125px}
+  .flow .stage:not(:last-child)::after{content:"→";position:absolute;right:-18px;top:42px;color:var(--gold);font-size:22px;font-weight:800;z-index:2}
+  .stage strong{display:block;font-size:13pt;margin-bottom:5px}
+  .stage small{opacity:.9;line-height:1.6}
+  .metric{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line)}
+  .metric:last-child{border-bottom:0}.metric b{color:var(--green)}
+  .highlight{background:var(--green);color:white;border-radius:15px;padding:20px;margin:16px 0}
+  .highlight h3{color:#fff}.highlight .big{font-size:28pt;font-weight:800;line-height:1.25;color:#f2d6a7}
+  
+  .checklist{counter-reset:item;display:grid;gap:9px}
+  .checklist > div { 
+      display: flex;
+      align-items: flex-start;
+      gap: 10px; 
+  }
+  .checklist > div::before {
+      counter-increment:item;
+      content:counter(item);
+      display:inline-grid;
+      place-items:center;
+      width:26px;
+      min-width: 26px;
+      height:26px;
+      border-radius:50%;
+      background:var(--sage);
+      color:var(--green);
+      font-weight:800;
+      flex-shrink: 0;
+      margin-top: 2px;
+  }
+  .checklist-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+  }
+  .checklist-content span {
+      font-weight: bold;
+      color: var(--ink);
+  }
+  .checklist-content small {
+      display: block;
+      margin-top: 2px;
+  }
+  
+  .text-red { color: var(--red); font-weight: bold; }
+
+  .page-label{position:absolute;right:18mm;top:12mm;color:#9aa49f;font-size:9pt}
+  .toc{display:grid;gap:0;margin-top:18px}.toc div{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.toc b{color:var(--green);min-width:28px}
+  .small{font-size:10pt;color:var(--muted)}
+
+  /* Roadmap Grid */
+  .roadmap-section { margin-top: 20px; border-top: 1px dashed var(--line); padding-top: 18px; }
+  .roadmap-title { font-size: 11pt; color: var(--muted); font-weight: bold; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .roadmap-title::before { content: "🎯"; }
+  .roadmap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .roadmap-card { background: #fbfcfb; border: 1px solid var(--line); border-top: 3.5px solid var(--gold); border-radius: 8px; padding: 14px; }
+  .roadmap-q { font-weight: 900; color: var(--gold); margin-bottom: 6px; font-size: 11.5pt; letter-spacing: 0.05em; }
+  .roadmap-card span { display: block; font-size: 11pt; font-weight: bold; color: var(--ink); margin-bottom: 4px; }
+  .roadmap-card small { display: block; font-size: 9.5pt; color: var(--muted); line-height: 1.5; }
+
+  /* 核心價值區塊樣式 */
+  .value-stack { display: grid; gap: 16px; margin-top: 18px; }
+  .value-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .value-card-header .num { margin-bottom: 0; flex-shrink: 0; }
+  .value-card-header h3 { margin: 0; font-size: 14.5pt; }
+  .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pain-box { background: #fdf6f6; border-left: 3.5px solid #d97777; padding: 12px 14px; border-radius: 0 8px 8px 0; font-size: 10.5pt; color: #5a4242; line-height: 1.65; }
+  .pain-box strong { display: block; color: #b74444; font-size: 10pt; margin-bottom: 4px; letter-spacing: 0.04em; }
+  .gain-box { background: #f2f8f5; border-left: 3.5px solid var(--green); padding: 12px 14px; border-radius: 0 8px 8px 0; font-size: 10.5pt; color: var(--ink); line-height: 1.65; }
+  .gain-box strong { display: block; color: var(--green); font-size: 10pt; margin-bottom: 4px; letter-spacing: 0.04em; }
+  
+  /* L1-L5 樣式 */
+  .maturity-timeline { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+  .maturity-step { display: flex; gap: 16px; background: #fbfcfb; border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; align-items: center; position: relative; transition: all 0.2s; }
+  .maturity-step:hover { border-color: var(--green); background: var(--white); box-shadow: 0 4px 12px rgba(31,90,77,.08); }
+  .maturity-step .level { font-size: 18pt; font-weight: 900; color: var(--gold); min-width: 48px; text-align: center; }
+  .maturity-step .content { flex: 1; }
+  .maturity-step .content h4 { margin: 0 0 4px 0; font-size: 12.5pt; color: var(--green); }
+  .maturity-step .content p { margin: 0; font-size: 10pt; color: var(--muted); }
+  .maturity-step .value { text-align: right; color: var(--ink); font-size: 10.5pt; padding-left: 16px; border-left: 1px dashed var(--line); min-width: 140px; }
+  .maturity-step .value strong { display: block; color: var(--green); font-size: 11pt; margin-bottom: 2px; }
+  
+  /* 選項比較表樣式 */
+  .option-card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; }
+  .option-card.best { border: 2.5px solid var(--green); background: linear-gradient(180deg, #f4f9f6 0%, #fff 100%); box-shadow: 0 8px 24px rgba(31,90,77,.1); position: relative; }
+  .option-card.best::before { content: "RECOMMENDED"; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--green); color: white; font-size: 8pt; font-weight: bold; padding: 2px 10px; border-radius: 99px; letter-spacing: 0.05em; }
+  .option-title { font-size: 12pt; font-weight: 800; color: var(--ink); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  .option-card.best .option-title { color: var(--green); border-bottom-color: rgba(31,90,77,.2); }
+  .option-attr { font-size: 10pt; line-height: 1.6; margin-bottom: 8px; }
+  .option-attr span { display: block; font-size: 9pt; color: var(--muted); margin-bottom: 2px; }
+  
+  @media(max-width:900px){
+    body{background:#fff}.toolbar{position:sticky}.report{margin:0 auto}.page{width:100%;min-height:auto;margin:0;padding:42px 24px 70px;box-shadow:none;border-bottom:10px solid #e9eeeb}.page::after{left:24px;right:24px;bottom:22px}.page-label{right:24px;top:24px}h1{font-size:27pt}h2{font-size:21pt}.grid-2,.grid-3,.vs-grid,.roadmap-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .stage:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-23px}.cover{min-height:85vh;padding-top:42px}.cover-main{margin-top:6vh}.cover-note{grid-template-columns:1fr}
+    .cover-header { align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+    .logo-img{height:50px;}
+    .reporter-info { font-size: 9pt; }
+    .maturity-step { flex-direction: column; text-align: center; gap: 10px; }
+    .maturity-step .value { text-align: center; padding-left: 0; border-left: none; border-top: 1px dashed var(--line); padding-top: 10px; min-width: auto; width: 100%; }
+  }
+  @media print{
+    @page{size:A4 portrait;margin:0}
+    body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .toolbar{display:none}.report{margin:0;max-width:none}.page{margin:0;box-shadow:none;width:210mm;height:297mm;min-height:297mm;padding:18mm 18mm 16mm}.page::after{content:"不老松｜營運數位化整合方案"}
+    .roadmap-card { border-color: #d9dfdc; background: #fbfcfb; }
+    .option-card.best { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="toolbar"><small>不老松｜營運數位化整合方案</small><button onclick="window.print()">列印／另存 PDF</button></div>
+  <main class="report">
+    <section class="page cover">
+      
+      <div class="cover-header">
+          <div class="brand">
+              <img src="logo.png" alt="不老松足湯養身行館" class="logo-img">
+          </div>
+          <div class="reporter-info">
+              報告人：賴信吉<br>
+              2026/10/10
+          </div>
+      </div>
+      
+      <div class="cover-main">
+        <div class="eyebrow">OPERATION &amp; DIGITAL TRANSFORMATION PROPOSAL</div>
+        <h1>營運數位化<br/>整合方案</h1>
+        <div class="cover-line"></div>
+        <div class="cover-sub">
+            以 AI 與標準化流程，為 22 家門店建立可量化的管理機制。<br><br>
+            <span style="font-size: 13.5pt; color: var(--gold); font-weight: 800;">附——職務定位與薪資調整建議</span>
+        </div>
+      </div>
+      <div class="cover-note"><div><b>專案與職務涵蓋</b><br/>營運改善暨資訊系統主管</div><div><b>實施範圍</b><br/>全台 22 家門店｜跨店管理與數位化轉型</div></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">01 / 提案摘要</div>
+      <div class="section-kicker">Executive Summary</div><h2>從單點支援，升級為全公司營運效能引擎</h2>
+      <p class="lead">感謝公司給予前往各門店協助營運改善的機會。<b>建議公司</b>將此次實務經驗轉化為長期的公司資產，整合「營運管理 × 資訊系統 × 教育訓練」三大面向，導入數位工具與標準化流程。</p>
+      <div class="quote">本提案不僅是單點支援的延伸，更是讓公司以最佳成本獲得一整套數位與營運管理解方，進而<span class="text-red">降低隱形溝通成本、取代繁瑣人工並規避營運風險。</span></div>
+      <div class="grid-3">
+        <div class="card accent"><div class="num">01</div><h3>現場落地</h3><p>深入北、中、南門店，從第一線作業理解需求與問題，建立符合現場的改善制度。</p></div>
+        <div class="card accent"><div class="num">02</div><h3>數據追蹤</h3><p>統一指標與回報方式，以營運數據、執行率及品質指標追蹤改善成果。</p></div>
+        <div class="card accent"><div class="num">03</div><h3>持續複製</h3><p>把經驗轉化為制度、教材及系統功能，讓成功做法可跨店推廣。</p></div>
+      </div>
+      <div class="rule"></div><h3>提案核心成果</h3>
+      <div class="toc"><div><b>A</b><span>建立跨店營運改善與問題追蹤機制，減少管理盲區。</span></div><div><b>B</b><span>統籌全台 22 家門店資訊系統開發，省下外部發包高昂費用。</span></div><div><b>C</b><span>建置新人與晉升培訓的數位化制度，縮短上手時間。</span></div><div><b>D</b><span>形成「發現問題 → 分析原因 → 改善 → 驗收」的管理循環。</span></div></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">02 / 職務定位</div><div class="section-kicker">Role Definition</div><h2>三大職責，直擊痛點創造價值</h2>
+      <div class="card accent"><div class="num">01</div><h3>營運管理與跨店改善</h3><p>協助處理問題門店的營運、人員管理、服務品質及工作流程；與店長、總監及督導共同分析問題、制定改善方案並追蹤執行成果，<b>有效規避管理盲點與營運風險。</b></p><div><span class="pill">降低風險</span><span class="pill">流程改善</span><span class="pill">跨店複製</span></div></div>
+      <div style="height:12px"></div>
+      <div class="card accent"><div class="num">02</div><h3>資訊系統規劃、開發與維護</h3><p>負責全台 22 家門店的內部資訊系統規劃、架構設計、程式開發、功能優化及持續維護，逐步建立整合性、標準化的數位管理系統，<b>大幅取代繁瑣的人工文書作業，降低人為錯誤率。</b></p><div><span class="pill">防呆防錯</span><span class="pill">需求管理</span><span class="pill">自動化</span></div></div>
+      <div style="height:12px"></div>
+      <div class="card accent"><div class="num">03</div><h3>教育訓練與人才培育</h3><p>建立新人訓練、主管培訓、晉升評核及標準作業流程；結合數位工具，留下訓練紀錄與追蹤機制，<b>縮短新人上手時間，有效提升員工留任率與服務一致性。</b></p><div><span class="pill">縮短陣痛期</span><span class="pill">主管培訓</span><span class="pill">留任率提升</span></div></div>
+      <div class="highlight"><h3>職務價值主張</h3><p>讓資訊系統不只是輔助工具，而是連結現場營運、人才培育與管理決策，為公司省時、省錢並產生數據紅利的重要基礎。</p></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">03 / 執行架構</div><div class="section-kicker">Operating Model</div><h2>前端 × 中端 × 後端整合</h2>
+      <p class="lead">為確保管理制度與第一線現場作業不脫軌，<b>建議採取</b>「前端實地操作、中端協同改善、後端數位管理」的工作模式，<span class="text-red">讓制度與系統真正符合現場需求。</span></p>
+      <div class="flow"><div class="stage"><strong>前端｜看見問題</strong><small>北、中、南門店實地操作、流程觀察、問題蒐集與數據建立。</small></div><div class="stage"><strong>中端｜共同改善</strong><small>與店長、總監及督導分析原因、規劃責任分工、訓練與改善期限。</small></div><div class="stage"><strong>後端｜形成系統</strong><small>將問題、方案與教材數位化，建立回報、追蹤、驗收與結案機制。</small></div></div>
+      <div class="grid-2">
+        <div class="card"><h3>前端：實地操作與數據蒐集</h3><ul><li>了解人員作業、服務流程、營運管理與系統使用情況。</li><li>將口頭回報與個人判斷，轉換為可量化、可比較、可追蹤的指標。</li><li>建立改善前後的比較基準，讓決策有實際依據。</li></ul></div>
+        <div class="card"><h3>中端：協同改善與訓練規劃</h3><ul><li>找出影響效率、品質與執行力的關鍵因素。</li><li>制定改善方案、責任分工與完成期限。</li><li>把個別門店問題轉化為可複製、可推廣方案。</li></ul></div>
+      </div>
+      <div style="height:14px"></div><div class="card"><h3>後端：教育訓練數位化、系統與回報</h3><div class="grid-2"><ul><li>教材與標準作業流程管理</li><li>新人、主管與晉升考核紀錄</li><li>各門店執行進度與定期回報</li></ul><ul><li>異常事件、問題通報與改善追蹤</li><li>營運指標、目標達成率與跨店比較</li><li>管理報表與數據儀表板</li></ul></div></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">04 / 數據管理</div><div class="section-kicker">Data-driven Management</div><h2>從經驗管理，走向成果管理</h2>
+      <p class="lead">數據導向並不是單純追求數字，而是透過客觀資料協助管理者了解問題、判斷優先順序及確認改善成效。</p>
+      <div class="grid-2">
+        <div class="card"><h3>營運管理</h3><div class="metric"><span>營業額</span><b>目標達成率</b></div><div class="metric"><span>來客數</span><b>客單價</b></div></div>
+        <div class="card"><h3>人員管理</h3><div class="metric"><span>出勤狀況</span><b>工作執行率</b></div><div class="metric"><span>培訓完成率</span><b>考核結果</b></div></div>
+        <div class="card"><h3>服務品質</h3><div class="metric"><span>客訴件數</span><b>顧客評價</b></div><div class="metric"><span>回訪狀況</span><b>改善完成率</b></div></div>
+        <div class="card"><h3>工作效率與系統</h3><div class="metric"><span>處理時間</span><b>流程完成率</b></div><div class="metric"><span>錯誤／異常件數</span><b>資料填報完整率</b></div></div>
+      </div>
+      <div class="rule"></div><h3>五步驟 PDCA 數據循環</h3>
+      <div class="checklist">
+          <div>
+              <div class="checklist-content">
+                  <span>建立數據標準 (Plan)</span>
+                  <small class="small">統一指標定義、資料格式與回報方式，解決各店標準不一的問題。</small>
+              </div>
+          </div>
+          <div>
+               <div class="checklist-content">
+                  <span>建立量化目標 (Plan)</span>
+                  <small class="small">依工作性質設定目標值、期限與負責人。</small>
+              </div>
+          </div>
+          <div>
+               <div class="checklist-content">
+                  <span>建立追蹤機制 (Do)</span>
+                  <small class="small">透過數位系統記錄執行進度、異常狀況，確保執行不中斷。</small>
+              </div>
+          </div>
+          <div>
+               <div class="checklist-content">
+                  <span>建立數據分析 (Check)</span>
+                  <small class="small">比較門店表現與改善前後差異，找出核心原因及可複製的做法。</small>
+              </div>
+          </div>
+          <div>
+               <div class="checklist-content">
+                  <span>建立持續改善 (Act)</span>
+                  <small class="small">將分析結果回饋至現場、更新教材與優化系統防呆機制。</small>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">05 / 管理目標</div><div class="section-kicker">Management Outcomes</div><h2>把現場經驗轉化為公司制度</h2>
+      <div class="highlight"><h3>核心管理循環</h3><div class="big">現場發現問題<br/>→ 數據分析原因<br/>→ 跨部門共同改善<br/>→ 教育訓練落實<br/>→ 系統持續追蹤</div></div>
+      <div class="grid-2"><div class="card accent"><h3>對門店</h3><ul><li>提升營運效率與管理一致性</li><li>降低重複作業與資訊落差</li><li>縮短問題發現與處理時間</li><li>讓改善成果可被檢視與追蹤</li></ul></div><div class="card accent"><h3>對公司</h3><ul><li>建立可跨店複製的管理制度</li><li>提升人才培育與晉升品質</li><li>讓管理決策更具透明度與依據</li><li>逐步形成公司級數位管理基礎</li></ul></div></div>
+      <div class="rule"></div><h3>預期長期價值</h3><p class="lead">透過前端實地了解、中端協同改善及後端數位整合，將個人經驗轉化為公司制度，將現場作業轉化為數據，將管理需求轉化為系統功能，最終建立能持續運作、跨店複製並不斷優化的管理架構。</p>
+      <p>這不只是協助單一門店解決問題，而是從全公司角度，提升 22 家門店的管理效率、執行一致性、人才培育能力及整體營運品質。</p>
+    </section>
+
+    <section class="page">
+      <div class="page-label">06 / 方案評估</div><div class="section-kicker">Core Differentiation</div>
+      <h2>選項評估：最懂這 22 家門店的解方</h2>
+      <p class="lead">推動 22 家門店的數位轉型與營運整合，公司通常面臨三種人力編制與專案開發選項。<b>本提案的核心優勢從來不是「最便宜」，而是具備「對現場營運痛點的深度理解」。</b></p>
+
+      <div class="grid-3" style="margin-top: 24px; gap: 16px;">
+          
+          <div class="option-card">
+              <div class="option-title">選項 A：外包軟體公司</div>
+              <div class="option-attr">
+                  <span>團隊特性</span>
+                  僅懂純技術，不懂門店現場
+              </div>
+              <div class="option-attr">
+                  <span>執行風險</span>
+                  <div style="color: #b74444; font-weight: bold;">溝通成本極高</div>
+                  做出的系統往往不符合第一線人員操作習慣，每次功能修改皆需耗費龐大追加費用與時間。
+              </div>
+          </div>
+
+          <div class="option-card">
+              <div class="option-title">選項 B：擴編內部 IT 團隊</div>
+              <div class="option-attr">
+                  <span>團隊特性</span>
+                  內部可控，但需大量時間磨合
+              </div>
+              <div class="option-attr">
+                  <span>執行風險</span>
+                  <div style="color: #b74444; font-weight: bold;">人事與管理成本暴增</div>
+                  需聘請多名工程師。且純工程人員難以直接介入門店「營運問題」，缺乏進行跨部門溝通與流程改造的能力。
+              </div>
+          </div>
+
+          <div class="option-card best">
+              <div class="option-title">選項 C：本提案</div>
+              <div class="option-attr">
+                  <span>團隊特性</span>
+                  <b>懂 22 家店流程 ＋ 開發能力</b>
+              </div>
+              <div class="option-attr">
+                  <span>執行優勢</span>
+                  <div style="color: var(--green); font-weight: bold;">最高投資報酬率 (ROI)</div>
+                  由具備第一線實務經驗的內部人員親自統籌，免去昂貴外包與溝通落差，將現場問題直接轉化為系統解方。
+              </div>
+          </div>
+
+      </div>
+
+      <div class="quote" style="margin-top: 28px;">
+          最大的差異化，在於能夠穿透第一線現場與後端程式碼。真正做到「系統配合營運」，而非「營運牽就系統」。
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">07 / 職稱與薪資建議</div><div class="section-kicker">Position &amp; Compensation</div><h2>職責、權限與整體投資回報</h2>
+      <div class="card accent"><h3>建議正式職稱</h3><p style="font-size:20pt;color:var(--green);font-weight:800;margin:5px 0">營運改善暨資訊系統主管</p><p>正式承接全公司資訊系統管理及教育訓練相關職責。</p></div>
+      <div style="height:14px"></div><div class="card"><h3>職務層級延伸</h3><p>若公司評估由內部統籌全公司的資訊策略、系統架構及數位化發展最具效益，亦建議進一步討論「資訊長（CIO）」及「教育訓練主管」的職務定位與權責。</p></div>
+      
+      <div class="highlight" style="margin-top: 24px;">
+          <h3>建議薪資調整</h3>
+          <div class="big">每月增加 NT$28,000</div>
+          <p style="margin-top: 10px; line-height: 1.6;">
+              此金額係針對新增職務的整體責任提出。本提案由單一內部主管統籌 <strong>全台 22 家門店 IT 系統建置、營運問題督導與教育訓練推動</strong>，大幅取代傳統需配置多人的高昂外包與團隊編制，為公司創造極佳的投資報酬率。
+          </p>
+      </div>
+      
+      <h3>新增責任涵蓋</h3><div class="grid-2"><ul><li>跨店營運改善</li><li>全台 22 家門店資訊系統規劃</li><li>程式開發與持續維護</li></ul><ul><li>數據管理機制</li><li>教育訓練制度建置</li><li>數位化推動與管理整合</li></ul></div>
+      <div class="quote">建議薪資、職稱與管理權限能夠相互對應，透過正式的職務定位與合理資源配置，為公司長期扛起整體營運與數位轉型的責任。</div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">08 / 權責與執行規劃</div><div class="section-kicker">Governance &amp; Execution</div><h2>正式調整時，建議一併確認七項事項</h2>
+      <div class="checklist">
+          <div>
+              <div class="checklist-content">
+                  <span>職務定位</span>
+                  <small class="small">正式職稱、工作範圍、匯報對象及決策權限。</small>
+              </div>
+          </div>
+          <div>
+              <div class="checklist-content">
+                  <span>交接安排</span>
+                  <small class="small">原門店職務的交接方式，以及跨店支援的工作安排。</small>
+              </div>
+          </div>
+          <div>
+              <div class="checklist-content">
+                  <span>巡店配置</span>
+                  <small class="small">北、中、南門店實地操作與巡店的頻率及時間配置。</small>
+              </div>
+          </div>
+          <div>
+              <div class="checklist-content">
+                  <span>系統治理</span>
+                  <small class="small">22 家門店的需求提出、開發優先順序、測試驗收與維護機制。</small>
+              </div>
+          </div>
+          <div>
+              <div class="checklist-content">
+                  <span>訓練推動</span>
+                  <small class="small">教育訓練制度的推動權限、各門店配合方式及執行責任。</small>
+              </div>
+          </div>
+          <div>
+              <div class="checklist-content">
+                  <span>成果評估</span>
+                  <small class="small">數據指標、階段性目標、成果評估方式及所需資源。</small>
+              </div>
+          </div>
+          <div>
+              <div class="checklist-content">
+                  <span>任命與薪資</span>
+                  <small class="small">薪資調整金額、生效日期及正式職務任命方式。</small>
+              </div>
+          </div>
+      </div>
+      <div class="rule"></div><div class="card"><h3>需求管理原則</h3><p>由於資訊系統涵蓋全台 22 家門店，後續涉及不同門店的實際需求、功能調整、系統穩定性及持續維護，因此需要建立明確的需求管理與工作優先順序，避免所有臨時需求同時進入開發流程，影響整體工作品質與進度。</p></div>
+      <div style="height:18px"></div><h3>建議的管理節奏</h3><div class="grid-3"><div class="card"><b style="color:var(--green)">每週</b><p class="small">問題與需求彙整、進度回報、異常處理。</p></div><div class="card"><b style="color:var(--green)">每月</b><p class="small">營運指標檢視、跨店比較、改善驗收。</p></div><div class="card"><b style="color:var(--green)">每季</b><p class="small">制度盤點、訓練成效與系統優化規劃。</p></div></div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">09 / 系統架構與藍圖</div><div class="section-kicker">Architecture &amp; Roadmap</div><h2>企業級雲端基礎設施與階段性承諾</h2>
+      <p class="lead">為加速開發時程及 API 調用，系統後端架構採用 <strong>Google Cloud (GCP) 雲端運算平台與 Firebase 開發平台</strong>，免除本地端當機風險與維護不便；同時採用公司既有的 <strong>Google Workspace</strong> 進行雲端資源的帳號集中管理。</p>
+      
+      <div class="card accent">
+        <h3 style="margin-bottom: 14px;">安全穩定的雲端運算與權限架構</h3>
+        <div class="grid-2" style="font-size: 10.5pt; color: #4b4438;">
+          <ul style="margin:0; padding-left: 1.25em;">
+            <li style="margin-bottom:8px"><b>公司 Google Workspace：</b><br>作為基礎身份，統一管理公司雲端資源。</li>
+            <li style="margin-bottom:8px"><b>Google Cloud 專案與帳務：</b><br>集中管理後端運算 API、權限與費用。</li>
+            <li style="margin-bottom:8px"><b>Firebase Authentication：</b><br>建立高安全性的系統登入與帳號驗證機制。</li>
+            <li style="margin-bottom:8px"><b>Cloud Firestore：</b><br>作為系統核心資料庫，安全儲存各項管理資料。</li>
+          </ul>
+          <ul style="margin:0; padding-left: 1.25em;">
+            <li style="margin-bottom:8px"><b>Firebase Hosting：</b><br>提供高速穩定的網站發布與前端部署。</li>
+            <li style="margin-bottom:8px"><b>GitHub Repository：</b><br>妥善保存程式碼版本與修改紀錄，確保資產留存。</li>
+            <li style="margin-bottom:8px"><b>IAM、資料庫安全規則與備份：</b><br>建立嚴密的存取權限、資安防護及資料復原機制。</li>
+            <li style="margin-bottom:8px"><b>Cloud Logging 與費用警示：</b><br>即時追蹤系統錯誤，並避免非預期的雲端支出。</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="background: var(--sage); color: var(--green); padding: 14px 20px; border-radius: 8px; margin-top: 16px; margin-bottom: 24px; font-weight: bold; font-size: 11pt; display: flex; align-items: flex-start; gap: 10px;">
+        <span style="font-size: 14pt; line-height: 1.2;">💡</span> 
+        <div>以上企業級後端架構與資源，初期預估每月維運成本僅約 <b>NT$ 300 ～ $3,000</b><span style="font-size: 10pt; font-weight: normal; color: var(--green-2);">（依實際資料儲存與流量而定）</span>。</div>
+      </div>
+
+      <div class="roadmap-section">
+          <div class="roadmap-title">開放式需求系統提案建置</div>
+          <p style="font-size: 10.5pt; color: var(--muted); margin-bottom: 14px;">為了確保開發資源精準解決最高價值的營運痛點，未來所有系統功能的開發與上線，皆建議依循以下專業化治理流程：</p>
+          <div class="grid-2" style="gap: 14px;">
+              <div class="card" style="background: #fbfcfb; border-color: var(--line); padding: 14px;">
+                  <strong style="color: var(--green); display: block; margin-bottom: 6px; font-size: 11pt;">1. 開放式需求提案</strong>
+                  <small style="color: var(--muted); line-height: 1.6;">建立標準化提案管道，開放全台門店與總部各部門提出營運痛點與系統擴充需求，取代過去零散的口頭交辦。</small>
+              </div>
+              <div class="card" style="background: #fbfcfb; border-color: var(--line); padding: 14px;">
+                  <strong style="color: var(--green); display: block; margin-bottom: 6px; font-size: 11pt;">2. 評核與審議</strong>
+                  <small style="color: var(--muted); line-height: 1.6;">針對提案進行商業價值與營運急迫性評估，經由總部審議確認後，篩選出真正具備高投資報酬率的開發項目。</small>
+              </div>
+              <div class="card" style="background: #fbfcfb; border-color: var(--line); padding: 14px;">
+                  <strong style="color: var(--green); display: block; margin-bottom: 6px; font-size: 11pt;">3. 排程建設</strong>
+                  <small style="color: var(--muted); line-height: 1.6;">將審議通過的需求納入系統開發排程，集中技術資源進行架構設計與程式撰寫，進行動態滾動式的開發。</small>
+              </div>
+              <div class="card" style="background: #fbfcfb; border-color: var(--line); padding: 14px;">
+                  <strong style="color: var(--green); display: block; margin-bottom: 6px; font-size: 11pt;">4. 測試與上架</strong>
+                  <small style="color: var(--muted); line-height: 1.6;">完成程式建設後進行跨店測試與功能驗收，確認無誤後正式部署上架，形成完整的開放式系統生命週期。</small>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">10 / 數位工具核心價值</div><div class="section-kicker">Core Value Proposition</div><h2>數位工具導入之三大核心價值</h2>
+      <p class="lead">透過自建系統與標準化工具，解決跨店管理最耗時的三大痛點，將人力與時間還給現場服務：</p>
+
+      <div class="value-stack">
+        <div class="card accent">
+          <div class="value-card-header">
+            <div class="num">01</div>
+            <h3>大幅降低跨店溝通成本｜資訊同步零時差</h3>
+          </div>
+          <div class="vs-grid">
+            <div class="pain-box">
+              <strong>過去痛點</strong>
+              依賴 LINE 群組、電話或口頭交辦，訊息容易被洗版遺漏，跨部門與跨店來回確認耗費大量心力。
+            </div>
+            <div class="gain-box">
+              <strong>產生價值</strong>
+              透過系統建立「單一資訊入口」（如線上報修、問題通報、進度追蹤），所有狀態一目了然，省去重複詢問與人工催促進度的溝通成本。
+            </div>
+          </div>
+        </div>
+
+        <div class="card accent">
+          <div class="value-card-header">
+            <div class="num">02</div>
+            <h3>財務數據統整與精準核對｜帳務透明防呆</h3>
+          </div>
+          <div class="vs-grid">
+            <div class="pain-box">
+              <strong>過去痛點</strong>
+              22 家門店各自結算、人工彙整報表，不僅耗時，且容易發生計算疏漏或格式不一，對帳成本極高。
+            </div>
+            <div class="gain-box">
+              <strong>產生價值</strong>
+              透過財務對帳系統自動統整各店數據，建立標準化核對機制；大幅提升對帳準確率與速度，讓異常帳務無所遁形，協助總部即時掌握精準財務狀況。
+            </div>
+          </div>
+        </div>
+
+        <div class="card accent">
+          <div class="value-card-header">
+            <div class="num">03</div>
+            <h3>減少人員重複作業時間｜釋放現場管理動能</h3>
+          </div>
+          <div class="vs-grid">
+            <div class="pain-box">
+              <strong>過去痛點</strong>
+              店長與第一線人員花費過多時間在抄寫、key-in 重複資料、人工排班計算與整理紙本考核紀錄。
+            </div>
+            <div class="gain-box">
+              <strong>產生價值</strong>
+              將例行性文書與資料彙整交由系統自動化處理，大幅縮短人員行政作業時間，讓店長與員工能將寶貴的時間專注於「現場顧客服務」與「門店營運改善」。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote" style="margin-top: 22px;">把繁瑣留給系統，把精準留給數據，把時間還給現場服務。</div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">11 / 系統導入與驗證指標</div><div class="section-kicker">Lifecycle &amp; Maturity</div>
+      <h2>系統落地的五階段成熟度指標</h2>
+      <p class="lead">為確保開發資源真正轉化為管理價值，本提案針對系統生命週期建立了一套 L1 到 L5 的分級驗證機制。系統的價值不在於「開發完成」，而在於「實際產生效益並能跨店推廣」。</p>
+
+      <div class="maturity-timeline">
+          
+          <div class="maturity-step">
+              <div class="level">L1</div>
+              <div class="content">
+                  <h4>開發完成</h4>
+                  <p>系統功能已開發完畢，但尚未投入正式使用。</p>
+              </div>
+              <div class="value">
+                  <strong>價值定位</strong>
+                  已具備開發成果
+              </div>
+          </div>
+
+          <div class="maturity-step">
+              <div class="level">L2</div>
+              <div class="content">
+                  <h4>正式上線</h4>
+                  <p>系統已部署於雲端，具備實務上的連線與使用條件。</p>
+              </div>
+              <div class="value">
+                  <strong>價值定位</strong>
+                  已具備交付能力
+              </div>
+          </div>
+
+          <div class="maturity-step">
+              <div class="level">L3</div>
+              <div class="content">
+                  <h4>實際使用</h4>
+                  <p>已有同事或特定門店開始在日常作業中實際登入與操作。</p>
+              </div>
+              <div class="value">
+                  <strong>價值定位</strong>
+                  已開始產生使用價值
+              </div>
+          </div>
+
+          <div class="maturity-step">
+              <div class="level">L4</div>
+              <div class="content">
+                  <h4>成效驗證</h4>
+                  <p>累積完整使用紀錄，可對比導入前後的效率與營運數據。</p>
+              </div>
+              <div class="value">
+                  <strong>價值定位</strong>
+                  可以提出量化效益
+              </div>
+          </div>
+
+          <div class="maturity-step">
+              <div class="level" style="color: var(--green);">L5</div>
+              <div class="content">
+                  <h4 style="color: var(--green);">跨店複製</h4>
+                  <p>已在多店導入並驗證成效，形成標準化 SOP。</p>
+              </div>
+              <div class="value">
+                  <strong style="color: var(--green);">價值定位</strong>
+                  具備規模化推廣證據
+              </div>
+          </div>
+          
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="page-label">12 / 結語</div><div class="section-kicker">Closing Statement</div><h2>一起把管理升級，變成公司的長期能力</h2>
+      <p class="lead">這次的規劃不只是個人職務的調整，更是替公司建立長期可運作、可量化、可複製、可持續改善的管理制度。</p>
+      <div class="quote">透過深入現場了解問題，並運用程式開發與系統架構能力，將實際作業轉化為數據、將管理經驗轉化為制度、將制度轉化為數位化工具。</div>
+      <p>若公司認同此發展方向，<b>建議以此架構啟動專案</b>，與各門店店長、總監及管理團隊共同合作，讓現場營運、資訊系統與教育訓練形成完整的管理體系，為不老松創造長期且可持續的價值。</p>
+      <div class="rule"></div><div class="grid-3"><div class="card accent"><h3>可落地</h3><p>從現場出發，制度與系統真正符合工作流程。</p></div><div class="card accent"><h3>可衡量</h3><p>以數據追蹤進度，讓成果清楚可見。</p></div><div class="card accent"><h3>可持續</h3><p>透過訓練、系統與治理，形成長期能力。</p></div></div>
+
+      <div style="margin-top:32px; border-top: 1px solid var(--line); padding-top: 24px;">
+          <h3 style="font-size: 11pt; color: var(--muted); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <span>⚖️</span> 系統開發及維護責任條款（雙方權益草案）
+          </h3>
+          <div class="card" style="background: var(--cream); border: 1px solid rgba(186,139,74,.3); font-size: 10pt; color: #4b4438; line-height: 1.8;">
+              <ul style="margin: 0; padding-left: 1.25em;">
+                  <li style="margin-bottom: 6px;"><b>系統所有權與智財權：</b>任職期間內因職務所需開發之系統架構、程式碼及相關文件，其智慧財產權歸屬公司所有。</li>
+                  <li style="margin-bottom: 6px;"><b>開發範圍與時程管理：</b>系統需求與新增功能需經總部進行商業價值與急迫性評估後排入開發，以確保 IT 資源發揮最大效益。</li>
+                  <li style="margin-bottom: 6px;"><b>維護責任與文件交接：</b>任職期間負有系統穩定運作之責任；若遇職務異動，需提供完整操作文件及原始碼，確實完成交接。</li>
+                  <li style="margin-bottom: 0;"><b>資料安全與保密義務：</b>於系統開發及維護過程中，接觸之公司營業秘密、財務數據及客戶資料，均嚴格遵守保密規範。</li>
+              </ul>
+          </div>
+      </div>
+      
+    </section>
+  </main>
+</body>
+</html>
